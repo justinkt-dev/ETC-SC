@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ETC SC Corporation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="brand">
+          <img src="assets/logo.svg" alt="ETC SC Corporation" class="logo">
+          <span class="brand-name">ETC SC Corporation</span>
+        </div>
+        <div class="contact-mini">
+          <span>Appelez-nous: <strong>+224 623989798 | +224 620874088</strong></span>
+          <a class="btn primary small" href="#contact">Contact</a>
+          <button id="themeToggle" class="btn primary small" type="button">Thème</button>
+        </div>
+      </div>
+      <nav class="navbar">
+        <div class="container nav-inner">
+          <ul class="menu">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#produits">Produits</a></li>
+            <li><a id="linkNouveaux" href="#nouveaux">Nouveautés</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <form class="search" id="searchForm">
+            <input type="search" id="searchInput" placeholder="Rechercher un produit…" aria-label="Recherche">
+            <button type="submit" class="btn primary">Chercher</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>ETC SC Corporation</h1>
+            <p>Solutions simples et fiables pour l'impression, l'informatique et la sécurité. Abonnez-vous à notre newsletter pour recevoir les dernières nouveautés.</p><br>
+            <a href="#produits" class="btn primary large">Découvrir</a> <br>
+            <div class="hero-info">
+              <div class="info-line">
+                <!-- location icon -->
+                <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 22s7-5.14 7-12a7 7 0 10-14 0c0 6.86 7 12 7 12z" stroke="currentColor" stroke-width="1.6" fill="none"/>
+                  <circle cx="12" cy="10" r="2.8" stroke="currentColor" stroke-width="1.6" fill="none"/>
+                </svg>
+                <span>Kaloum, Marché Niger à côté de la banque Afriland, Conakry, Guinea</span>
+              </div>
+              <div class="info-line">
+                <!-- clock icon -->
+                <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/>
+                  <path d="M12 7v5l4 2" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+                </svg>
+                <span>Lundi-Vendredi: 08:00-17:00 & Samedi: 08:00-15:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-media" id="heroRotator">
+            <picture>
+              <source type="image/webp" srcset="assets/laptop.webp" />
+              <img src="assets/laptop.webp" alt="Visuel produit"/>
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories container" id="produits">
+        <aside class="sidebar">
+          <div class="panel">
+            <h3>Meilleures ventes</h3>
+            <ul class="list compact" id="topSellers">
+              <!-- Injecté par JS -->
+            </ul>
+            
+          </div>
+          <div class="panel">
+            <h3>Gammes proposées</h3>
+            <ul class="list services-list">
+              <li>Ordinateurs</li>
+              <li>Imprimantes</li>
+              <li>Caméras</li>
+              <li>Nettoyants</li>
+              <li>Accessoires</li>
+              <li>Câbles Ethernet</li>
+            </ul>
+          </div>
+          <div class="panel social">
+            <h3>Suivez-nous</h3>
+            <a class="social-btn facebook" target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=61557733075047">Facebook</a>
+            <a class="social-btn whatsapp" target="_blank" rel="noreferrer" href="https://www.whatsapp.com/channel/0029VaWuyFX72WTxVxBhNa2F">WhatsApp</a>
+          </div>
+        </aside>
+
+          <div class="grid">
+          <div class="grid-title">
+            <h2>Produits</h2>
+            <div class="pills">
+              <span class="pill active" data-filter="all">Tout</span>
+              <span class="pill" data-filter="new">Nouveaux</span>
+              <span class="pill" data-filter="ordinateurs">Ordinateurs</span>
+              <span class="pill" data-filter="printer">Imprimantes</span>
+              <span class="pill" data-filter="ink">Encres</span>
+              <span class="pill" data-filter="camera">Caméras</span>
+              <span class="pill" data-filter="cleaner">Nettoyants</span>
+              <span class="pill" data-filter="others">Accessoires</span>
+            </div>
+          </div>
+          <div class="products" id="productGrid">
+            <!-- Cartes produits injectées par JS -->
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="container newsletter-inner">
+        </div>
+      </section>
+
+      <section id="contact" class="contact container">
+        <h1>Contactez-nous</h1>
+        <p style="font-size: 1.15rem;">Laissez vos coordonnées et votre message, nous revenons vers vous rapidement.</p>
+        <div class="contact-actions" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:16px;">
+          <a class="btn primary large" style="flex:1; text-align:center;" target="_blank" rel="noreferrer" href="https://m.me/sita.camara.90">Contactez-nous Sur Messenger</a>
+          <a class="btn primary large" style="flex:1; text-align:center;" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=224666958301&text=Lien%C2%A0%3A%0Ahttps%3A%2F%2Ffb.me%2F3ASBAsGrl%0A%0ABonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&source_url=https%3A%2F%2Ffb.me%2F3ASBAsGrl&icebreaker=Bonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&app=facebook&entry_point=post_cta&jid=224666958301%40s.whatsapp.net&lid=48262581096511%40lid&show_ad_attribution=1&source=FB_Post&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NTk3NTYyOTksInBob25lIjoiMjI0NjY2OTU4MzAxIiwidGV4dCI6IkxpZW5cdTAwYTA6XG5odHRwczpcL1wvZmIubWVcLzNBU0JBc0dybFxuXG5Cb25qb3VyXHUwMGEwISBQdWlzLWplIGVuIHNhdm9pciBwbHVzIFx1MDBlMCBjZSBzdWpldFx1MDBhMD8iLCJzb3VyY2VfdXJsIjoiaHR0cHM6XC9cL2ZiLm1lXC8zQVNCQXNHcmwiLCJpY2VicmVha2VyIjoiQm9uam91clx1MDBhMCEgUHVpcy1qZSBlbiBzYXZvaXIgcGx1cyBcdTAwZTAgY2Ugc3VqZXRcdTAwYTA_IiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBvc3RfY3RhIiwiamlkIjoiMjI0NjY2OTU4MzAxXHUwMDQwcy53aGF0c2FwcC5uZXQiLCJsaWQiOiI0ODI2MjU4MTA5NjUxMVx1MDA0MGxpZCIsInNob3dfYWRfYXR0cmlidXRpb24iOjEsInNvdXJjZSI6IkZCX1Bvc3QiLCJzb3VyY2VfaWQiOiIxMjIwOTU0NDc3NjAyNTc3NjkiLCJjb250ZXh0IjoiQWZkRUZreVJqQWRPMWJvWTdua3pIRDRxVnRiWkVoLU9rNmJrSDZEWlFRQ1A5V3V1SmhGeFJldUg3bkxwSWQ0RTE0YU4xT0hlUW9yOHBLeGR4NUtKak1lVGZUU3VoQi1wLXJnRFIyV1dBX1hHelNwVGlJZ3RYUTFrZDdTSDJsSTR5bWpjUk44NTNEZ1FwQnhrUGRkMmNiYmFLU0x5aUcwbldFMnhEWWljVTlNVFJsSXh1TWdaTDJPMGx6NlJURnVFTGh3d1JVcE92STh4MkVXMmQxS3h6T1FLdnJFaDJqYjZOZ2RaT004dE90TXo4NUxDcGw5dEc2SERCaFM5NndzcWphZktVNmNVckt5VFdZNERaSzZ1ajFkNmw0T2ZPdWtldktCSzcyMzZOMVFGbzVfLUNIRW9FUmhXOGVENms3VHJaMVlmVkhLYXhydFA2SUhYellVb3B5TzdqMkxsdFljMUd4Y1dSVGJ0alQwWlBkMmUxQ1QyIn0.fNknohtQNmyKxCytPzcWPFgmaX-SlVU9lTegdr20iNZ0cCTOT9UCqZLQusxZKl65QEhnwkqVAKnREcqDMxNTTw">Contactez-nous Sur WhatsApp</a>
+          <div class="btn primary large" style="flex:1; text-align:center; font-weight:700;">+224 620874088</div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="links">
+          <a href="#">Accueil</a>
+          <a href="#produits">Produits</a>
+          <a href="#nouveaux">Nouveautés</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <form class="search" id="footerSearchForm">
+          <input type="search" id="footerSearchInput" placeholder="Rechercher un produit…" aria-label="Recherche (pied de page)">
+          <button type="submit" class="btn primary">Chercher</button>
+        </form>
+      </div>
+      <div class="container legal">
+        <small>© <span id="year"></span> ETC SC Corp. | Kaloum, Marché Niger à côté de la banque Afriland, Conakry, Guinea | Lundi-Vendredi: 08:00-17:00 & Samedi: 08:00-15:00</small>
+      </div>
+    </footer>
+
+    <!-- Détails produit (nouvelle interface modale) -->
+    <div id="productModal" class="modal" aria-hidden="true" role="dialog">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-content" role="document">
+        <button class="modal-close" aria-label="Fermer" data-close>×</button>
+        <div class="modal-body" id="modalBody"><!-- injecté par JS --></div>
+      </div>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+  </html>
+
+

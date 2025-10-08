@@ -1,0 +1,318 @@
+"use strict";
+// Central email configuration for outbound requests/notifications
+const products = [
+  // { id: 'p1', name: 'Ordinateur Portable Pro 14"', image: 'assets/ordi-portable.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 Go', Stockage: '512 Go SSD' } },
+  { id: 'p1', name: 'Laptop HP Omen 13th génération', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB | 32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p2', name: 'Laptop HP Victus 13th génération', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB | 32 GB', Graphics: '6 GB C.G', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p3', name: 'Laptop HP 12th et 13th génération Note-Book & Pro-Book', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3 | i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p4', name: 'Laptop HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3 | i5 | Ultra 5 & 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p5', name: 'Laptop HP OMNIBOOK', image: 'assets/omni-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p6', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
+  { id: 'p7', name: 'Climatiseurs', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
+  { id: 'p8', name: 'Desktop All in one 12th et 13th génération', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p9', name: 'Desktop HP 290', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
+  { id: 'p10', name: 'Chargeurs', image: 'assets/chargers.webp', category: 'accessory', isNew: true, specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p11', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
+  { id: 'p12', name: 'Encre HP Toner', image: 'assets/hptoner-ink.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
+  { id: 'p13', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
+  { id: 'p14', name: 'Encre RICOH', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
+  { id: 'p15', name: 'Type de Câbles', image: 'assets/cables.webp', category: 'accessory', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
+  { id: 'p16', name: 'Souris', image: 'assets/mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
+  { id: 'p17', name: "Verrous d'ordinateur", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
+  { id: 'p18', name: 'Casque stéréo', image: 'assets/stereo-hs.webp', category: 'accessory', isNew: true, specs: { Type: 'Casque', Categories: 'Stereo' } },
+  { id: 'p19', name: 'Adaptateur Type C Rj45', image: 'assets/adapt.webp', category: 'accessory', isNew: true, specs: { Type: 'Adaptateur', Categories: 'Type C Rj45' } },
+  { id: 'p20', name: 'Switch', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
+  // { id: 'p21', name: 'Imprimantes', image: 'assets/ro.webp', category: 'router', isNew: true, specs: { Type: 'Routeur', Categories: '4G LTE | 5G | Wifi' } },
+
+
+  { id: 'p21', name: 'Imprimantes', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
+  // { id: 'p3', name: 'Encre Universelle CMYK (Pack)', image: 'assets/inc-pack.webp', category: 'ink', specs: { Compatibilité: 'Jet d’encre', Rendement: 'Jusqu’à 5000 pages' } },
+  { id: 'p22', name: 'Nettoyant pour appareils (Kit)', image: 'assets/cleaner-kit.webp', category: 'cleaner', bestSeller: true, specs: { Contenu: 'Spray + chiffon', Volume: '200 ml' } },
+  // { id: 'p6', name: 'Laptop UltraFin 15"',image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'AMD Ryzen 7', RAM: '16 Go', Poids: '1.4 kg' } },
+  // { id: 'p7', name: 'Laptop HP Omen 13th génération',image: 'assets/omen-laptop.webp', category: 'laptop', specs: { CPU: 'AMD Ryzen 7', RAM: '16 Go', Poids: '1.4 kg' } },
+  { id: 'p23', name: 'Imprimante Laser L500', image: 'assets/printer-lazer.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet' } },
+  { id: 'p24', name: 'Caméra Bridge Zoom', image: 'assets/cctv_old.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
+  { id: 'p25', name: 'Scanneur Led 300', image: 'assets/scanner-led.webp', category: 'accessory', specs: { Type: 'Scanneurs', Categories: 'Led 300' } },
+  { id: 'p26', name: 'Scanneur HP2600 F1', image: 'assets/scanner-hp.webp', category: 'accessory', specs: { Type: 'Scanneurs', Categories: 'HP 2600 F1' } },
+  
+  { id: 'p27', name: 'Support Laptop Light Weight', image: 'assets/lapt-stand.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Light Weight | Portable' } },
+  { id: 'p28', name: 'Support Laptop', image: 'assets/stand-fan.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Tablette | Portable' } },
+  { id: 'p29', name: 'Spray Nettoyant Écran', image: 'assets/foam-cleaner.webp', category: 'cleaner', specs: { Sans_alcool: 'Oui', Volume: '100 ml' } },
+  { id: 'p30', name: 'Nettoyeurs - Air Dust', image: 'assets/air-dust.webp', category: 'cleaner', specs: { Type: 'Netoyyant', Marque: 'Hisense', Capacité: '7 Kg' } },
+
+  { id: 'p30', name: 'Routeur Tp‑Link', image: 'assets/router-tp.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
+  { id: 'p31', name: 'Routeur 4G LTE D‑Link DWR‑M921', image: 'assets/router.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
+  { id: 'p32', name: 'Machine a laver', image: 'assets/washing-machine.webp', category: 'accessory', specs: { Type: 'Machine a laver', Marque: 'Hisense', Capacité: '7 Kg' } },
+
+  { id: 'p33', name: 'Câble HDMI-VGA', image: 'assets/hdmi-vga.webp', category: 'accessory', specs: { Type: 'HDMI-VGA', Résolution: 'Jusqu’à 1080p', Longueur: '1.8 m', Compatibilité: 'PC | Moniteur | Projecteur' } },
+  { id: 'p35', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'accessory', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu’à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
+];
+function createProductCard(product) {
+  const card = document.createElement('article');
+  card.className = 'card';
+  card.setAttribute('data-category', product.category);
+  card.innerHTML = `
+    ${product.isNew ? '<span class="badge new">Nouveau</span>' : product.bestSeller ? '<span class="badge best">Best‑Seller</span>' : ''}
+    <picture> 
+      <source type="image/webp" srcset="${product.image}">
+      <img src="${product.image}" alt="${product.name}">
+    </picture>
+    <h4>${product.name}</h4>
+    <div class="muted">Disponible</div>
+    <div class="actions">
+      <a class="btn primary" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=224666958301&text=Lien%C2%A0%3A%0Ahttps%3A%2F%2Ffb.me%2F3ASBAsGrl%0A%0ABonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&source_url=https%3A%2F%2Ffb.me%2F3ASBAsGrl&icebreaker=Bonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&app=facebook&entry_point=post_cta&jid=224666958301%40s.whatsapp.net&lid=48262581096511%40lid&show_ad_attribution=1&source=FB_Post&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NTk3NTYyOTksInBob25lIjoiMjI0NjY2OTU4MzAxIiwidGV4dCI6IkxpZW5cdTAwYTA6XG5odHRwczpcL1wvZmIubWVcLzNBU0JBc0dybFxuXG5Cb25qb3VyXHUwMGEwISBQdWlzLWplIGVuIHNhdm9pciBwbHVzIFx1MDBlMCBjZSBzdWpldFx1MDBhMD8iLCJzb3VyY2VfdXJsIjoiaHR0cHM6XC9cL2ZiLm1lXC8zQVNCQXNHcmwiLCJpY2VicmVha2VyIjoiQm9uam91clx1MDBhMCEgUHVpcy1qZSBlbiBzYXZvaXIgcGx1cyBcdTAwZTAgY2Ugc3VqZXRcdTAwYTA_IiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBvc3RfY3RhIiwiamlkIjoiMjI0NjY2OTU4MzAxXHUwMDQwcy53aGF0c2FwcC5uZXQiLCJsaWQiOiI0ODI2MjU4MTA5NjUxMVx1MDA0MGxpZCIsInNob3dfYWRfYXR0cmlidXRpb24iOjEsInNvdXJjZSI6IkZCX1Bvc3QiLCJzb3VyY2VfaWQiOiIxMjIwOTU0NDc3NjAyNTc3NjkiLCJjb250ZXh0IjoiQWZkRUZreVJqQWRPMWJvWTdua3pIRDRxVnRiWkVoLU9rNmJrSDZEWlFRQ1A5V3V1SmhGeFJldUg3bkxwSWQ0RTE0YU4xT0hlUW9yOHBLeGR4NUtKak1lVGZUU3VoQi1wLXJnRFIyV1dBX1hHelNwVGlJZ3RYUTFrZDdTSDJsSTR5bWpjUk44NTNEZ1FwQnhrUGRkMmNiYmFLU0x5aUcwbldFMnhEWWljVTlNVFJsSXh1TWdaTDJPMGx6NlJURnVFTGh3d1JVcE92STh4MkVXMmQxS3h6T1FLdnJFaDJqYjZOZ2RaT004dE90TXo4NUxDcGw5dEc2SERCaFM5NndzcWphZktVNmNVckt5VFdZNERaSzZ1ajFkNmw0T2ZPdWtldktCSzcyMzZOMVFGbzVfLUNIRW9FUmhXOGVENms3VHJaMVlmVkhLYXhydFA2SUhYellVb3B5TzdqMkxsdFljMUd4Y1dSVGJ0alQwWlBkMmUxQ1QyIn0.fNknohtQNmyKxCytPzcWPFgmaX-SlVU9lTegdr20iNZ0cCTOT9UCqZLQusxZKl65QEhnwkqVAKnREcqDMxNTTw">Contactez +224 623 979897</a>
+      <button class="btn primary" data-details data-id="${product.id}">Voir détails</button>
+    </div>
+  `;
+  return card;
+}
+
+// Render products based on the filter
+function renderProducts(filter = 'all') {
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = '';
+  products
+    .filter(p => {
+    if (filter === 'all')
+      return true;
+    if (filter === 'new')
+      return !!p.isNew;
+    if (filter === 'ordinateurs')
+      return p.category === 'laptop' || p.category === 'pc';
+    if (filter === 'others') {
+      // Anything not covered by existing pills: ordinateurs(laptop|pc), printer, ink, camera, cleaner
+      const covered = new Set(['laptop','pc','printer','ink','camera','cleaner']);
+      return !covered.has(p.category);
+    }
+    return p.category === filter;
+  })
+    .forEach(p => grid.appendChild(createProductCard(p)));
+  wireDetails();
+}
+function activateFilters() {
+  const pills = document.querySelectorAll('.pill');
+  pills.forEach(p => p.addEventListener('click', () => {
+    pills.forEach(el => el.classList.remove('active'));
+    p.classList.add('active');
+    const target = p.dataset.filter;
+    renderProducts(target);
+  }));
+}
+function renderTopSellers() {
+  const ul = document.getElementById('topSellers');
+  if (!ul)
+    return;
+  ul.innerHTML = '';
+  products.slice(0, 8).forEach(p => {
+    const li = document.createElement('li');
+    li.innerHTML = `<picture><source type="image/webp" srcset="${p.image}"><img src="${p.image}" alt="${p.name}"></picture><span>${p.name}</span>`;
+    ul.appendChild(li);
+  });
+}
+
+function wireDetails() {
+  const grid = document.getElementById('productGrid');
+  const modal = document.getElementById('productModal');
+  const body = document.getElementById('modalBody');
+  if (!grid || !modal || !body)
+    return;
+  grid.querySelectorAll('[data-details]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id || '';
+      const product = products.find(p => p.id === id);
+      if (!product)
+        return;
+      const specsHtml = Object.entries(product.specs || {}).map(([k, v]) => `<div class=\"spec-item\"><span>${k}</span><span>${v}</span></div>`).join('');
+      const priceRange = `<a class=\"btn primary\" target=\"_blank\" rel=\"noreferrer\" href=\"https://api.whatsapp.com/send?phone=224666958301&text=Lien%C2%A0%3A%0Ahttps%3A%2F%2Ffb.me%2F3ASBAsGrl%0A%0ABonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&source_url=https%3A%2F%2Ffb.me%2F3ASBAsGrl&icebreaker=Bonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&app=facebook&entry_point=post_cta&jid=224666958301%40s.whatsapp.net&lid=48262581096511%40lid&show_ad_attribution=1&source=FB_Post&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NTk3NTYyOTksInBob25lIjoiMjI0NjY2OTU4MzAxIiwidGV4dCI6IkxpZW5cdTAwYTA6XG5odHRwczpcL1wvZmIubWVcLzNBU0JBc0dybFxuXG5Cb25qb3VyXHUwMGEwISBQdWlzLWplIGVuIHNhdm9pciBwbHVzIFx1MDBlMCBjZSBzdWpldFx1MDBhMD8iLCJzb3VyY2VfdXJsIjoiaHR0cHM6XC9cL2ZiLm1lXC8zQVNCQXNHcmwiLCJpY2VicmVha2VyIjoiQm9uam91clx1MDBhMCEgUHVpcy1qZSBlbiBzYXZvaXIgcGx1cyBcdTAwZTAgY2Ugc3VqZXRcdTAwYTA_IiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBvc3RfY3RhIiwiamlkIjoiMjI0NjY2OTU4MzAxXHUwMDQwcy53aGF0c2FwcC5uZXQiLCJsaWQiOiI0ODI2MjU4MTA5NjUxMVx1MDA0MGxpZCIsInNob3dfYWRfYXR0cmlidXRpb24iOjEsInNvdXJjZSI6IkZCX1Bvc3QiLCJzb3VyY2VfaWQiOiIxMjIwOTU0NDc3NjAyNTc3NjkiLCJjb250ZXh0IjoiQWZkRUZreVJqQWRPMWJvWTdua3pIRDRxVnRiWkVoLU9rNmJrSDZEWlFRQ1A5V3V1SmhGeFJldUg3bkxwSWQ0RTE0YU4xT0hlUW9yOHBLeGR4NUtKak1lVGZUU3VoQi1wLXJnRFIyV1dBX1hHelNwVGlJZ3RYUTFrZDdTSDJsSTR5bWpjUk44NTNEZ1FwQnhrUGRkMmNiYmFLU0x5aUcwbldFMnhEWWljVTlNVFJsSXh1TWdaTDJPMGx6NlJURnVFTGh3d1JVcE92STh4MkVXMmQxS3h6T1FLdnJFaDJqYjZOZ2RaT004dE90TXo4NUxDcGw5dEc2SERCaFM5NndzcWphZktVNmNVckt5VFdZNERaSzZ1ajFkNmw0T2ZPdWtldktCSzcyMzZOMVFGbzVfLUNIRW9FUmhXOGVENms3VHJaMVlmVkhLYXhydFA2SUhYellVb3B5TzdqMkxsdFljMUd4Y1dSVGJ0alQwWlBkMmUxQ1QyIn0.fNknohtQNmyKxCytPzcWPFgmaX-SlVU9lTegdr20iNZ0cCTOT9UCqZLQusxZKl65QEhnwkqVAKnREcqDMxNTTw\">Prix: Contactez +224 623979897</a>`;
+      body.innerHTML = `
+        <div>
+          <picture>
+            <source type=\"image/webp\" srcset=\"${product.image}\">
+            <img style=\"width:100%;height:340px;object-fit:contain;border-radius:12px;background:transparent;filter:drop-shadow(0 10px 24px rgba(0,0,0,.18))\" src=\"${product.image}\" alt=\"${product.name}\"> 
+          </picture>
+        </div>
+        <div>
+          <h3 style=\"margin:0 0 8px 0\">${product.name}</h3>
+          <div class=\"price-range\">${priceRange}</div>
+          <div class=\"specs\" style=\"margin-top:10px\">${specsHtml || '<span class=\"muted\">Spécifications à venir…</span>'}</div>
+        </div>`;
+      modal.setAttribute('aria-hidden', 'false');
+    });
+  });
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => modal.setAttribute('aria-hidden', 'true')));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape')
+      modal.setAttribute('aria-hidden', 'true');
+  });
+}
+function wireNewsletter() {
+  const form = document.getElementById('newsletterForm');
+  form?.addEventListener('submit', e => {
+    e.preventDefault();
+    // Silently accept and confirm subscription without opening mail client
+    // const email = document.getElementById('newsletterEmail').value; // kept if later needed
+    alert('Merci ! Vous recevrez bientôt la newsletter.');
+    form.reset();
+  });
+}
+function wireSearch() {
+  const form = document.getElementById('searchForm');
+  const input = document.getElementById('searchInput');
+  const footerForm = document.getElementById('footerSearchForm');
+  const footerInput = document.getElementById('footerSearchInput');
+  form?.addEventListener('submit', e => {
+    e.preventDefault();
+    const q = (input?.value || '').toLowerCase();
+    applyProductSearch(q);
+  });
+  footerForm?.addEventListener('submit', e => {
+    e.preventDefault();
+    const q = (footerInput?.value || '').toLowerCase();
+    applyProductSearch(q);
+  });
+}
+
+function applyProductSearch(q){
+  // Ensure products section is visible and rendered
+  document.querySelectorAll('.pill').forEach(el => el.classList.remove('active'));
+  document.querySelector('[data-filter="all"]')?.classList.add('active');
+  renderProducts('all');
+  const gridEl = document.getElementById('productGrid');
+  const cards = Array.from(document.querySelectorAll('#productGrid .card'));
+  cards.forEach(card => {
+    const name = card.querySelector('h4')?.textContent?.toLowerCase() || '';
+    card.style.display = name.includes(q) ? '' : 'none';
+  });
+  // Scroll into view after filtering
+  document.getElementById('produits')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Focus grid for accessibility
+  gridEl?.setAttribute('tabindex','-1');
+  gridEl?.focus({ preventScroll: true });
+}
+function wireContact() {
+  const form = document.getElementById('contactForm');
+  const flash = document.getElementById('contactFlash');
+  form?.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = String(data.get('name') || '').trim();
+    const phone = String(data.get('phone') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const subject = String(data.get('subject') || '').trim();
+    const message = String(data.get('message') || '').trim();
+    if (!name || !phone || !email || !subject || !message) {
+      flash.textContent = 'Veuillez remplir tous les champs obligatoires.';
+      flash.style.color = '#b91c1c';
+      return;
+    }
+    // Accept the message and show confirmation without opening mail client
+    flash.textContent = `Merci ${name}! Nous vous recontacterons très bientôt.`;
+    flash.style.color = '#065f46';
+    form.reset();
+  });
+}
+function setYear() {
+  const yearEl = document.getElementById('year');
+  if (yearEl)
+    yearEl.textContent = String(new Date().getFullYear());
+}
+function startHeroRotation() {
+  const container = document.getElementById('heroRotator');
+  if (!container)
+    return;
+  const img = container.querySelector('img');
+  if (!img)
+    return;
+  // Lock hero size based on inc.webp natural dimensions for consistent switching
+  const probe = new Image();
+  probe.src = 'assets/inc.webp';
+  probe.onload = () => {
+    const w = probe.naturalWidth;
+    const h = probe.naturalHeight;
+    if (w && h) {
+      // Set CSS variables to keep consistent size
+      container.style.setProperty('--hero-w', w + 'px');
+      container.style.setProperty('--hero-h', h + 'px');
+    }
+  };
+  // Base images already present in the project
+  const sources = [
+    { webp: 'assets/laptop.webp', fallback: 'assets/laptop.webp', alt: 'Laptop' },
+    { webp: 'assets/cctv.webp', fallback: 'assets/cctv.webp', alt: 'Caméra' },
+    { webp: 'assets/printer.webp', fallback: 'assets/printer.webp', alt: 'Imprimante' },
+    { webp: 'assets/inc.webp', fallback: 'assets/inc.webp', alt: 'Encres' },
+    { webp: 'assets/converter.webp', fallback: 'assets/converter.webp', alt: 'Convertisseur' },
+  ];
+  // Additional images that will be added eventually. We preload and append only if they exist.
+  const additionalCandidates = [
+    { webp: 'assets/ethernet.webp', fallback: 'assets/ethernet.webp', alt: 'Câble Ethernet' },
+    { webp: 'assets/router.webp', fallback: 'assets/router.webp', alt: 'Routeur' },
+    { webp: 'assets/bag.webp', fallback: 'assets/bag.webp', alt: 'Sac d’ordinateur' },
+    { webp: 'assets/charger.webp', fallback: 'assets/charger.webp', alt: 'Chargeur' },
+    { webp: 'assets/mouse.webp', fallback: 'assets/mouse.webp', alt: 'Souris' },
+  ];
+
+  additionalCandidates.forEach(candidate => {
+    const testImg = new Image();
+    testImg.onload = () => {
+      // Only append if it successfully loads (exists and is accessible)
+      sources.push(candidate);
+    };
+    testImg.onerror = () => {
+      // Silently ignore missing assets until they are added later
+    };
+    testImg.src = candidate.webp;
+  });
+  let i = 0;
+  setInterval(() => {
+    if (sources.length === 0)
+      return;
+    i = (i + 1) % sources.length;
+    const pic = container.querySelector('source');
+    if (pic) {
+      pic.srcset = sources[i].webp;
+    }
+    img.src = sources[i].fallback;
+    img.alt = sources[i].alt;
+  }, 3500);
+}
+function wireThemeToggle() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn)
+    return;
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark')
+    document.documentElement.classList.add('dark');
+  btn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+}
+// quick request removed
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts('all');
+  renderTopSellers();
+  activateFilters();
+  wireNewsletter();
+  wireSearch();
+  wireContact();
+  setYear();
+  startHeroRotation();
+  wireThemeToggle();
+  // Make all "Nouveautés" links reactive (header + footer)
+  document.querySelectorAll('a[href="#nouveaux"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const newPill = document.querySelector('[data-filter="new"]');
+      if (newPill) {
+        document.querySelectorAll('.pill').forEach(el => el.classList.remove('active'));
+        newPill.classList.add('active');
+        renderProducts('new');
+      }
+      document.getElementById('produits')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+});
+
+
