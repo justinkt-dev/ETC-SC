@@ -119,13 +119,15 @@ html.dark .btn.primary, html.dark a.btn.primary{color:#fff}
 .contact-header{text-align:center;margin-bottom:32px}
 .contact-header h1{margin:0 0 12px 0;font-size:2rem}
 .contact-header p{color:var(--muted);font-size:1.1rem;margin:0}
-.contact-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
+.contact-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1200px;margin:0 auto}
 .contact-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px 20px;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease;border-radius:12px;font-weight:600}
 .contact-btn:hover,
 .contact-btn:focus-visible{transform:translateY(-2px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,.12)}
 .contact-btn svg{flex-shrink:0}
 .contact-btn span{text-align:center}
 .phone-btn{cursor:pointer}
+.messenger-btn{background:#1877f2 !important;color:#fff !important}
+.whatsapp-btn{background:#25d366 !important;color:#fff !important}
 
 .contact-form{background:var(--panel);border:1px solid var(--ring);border-radius:12px;padding:16px}
 .contact-form .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
@@ -221,7 +223,7 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
 
 /* Medium tablets */
 @media (max-width: 768px){
-  .contact-actions{grid-template-columns:1fr;gap:12px}
+  .contact-actions{grid-template-columns:repeat(2,1fr);gap:12px}
   .contact-btn{width:100%;padding:14px 16px;font-size:0.95rem}
   .footer-content{grid-template-columns:1fr;gap:24px;text-align:center}
   .footer .links{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:16px}

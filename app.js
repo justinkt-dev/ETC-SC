@@ -5,7 +5,9 @@ const products = [
   { id: 'p1', name: 'Laptop HP Omen 13th génération', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB | 32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
   { id: 'p2', name: 'Laptop HP Victus 13th génération', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB | 32 GB', Graphics: '6 GB C.G', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p3', name: 'Laptop HP 12th et 13th génération Note-Book & Pro-Book', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3 | i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
-  { id: 'p4', name: 'Laptop HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3 | i5 | Ultra 5 & 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p4', name: 'Laptop HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p5', name: 'Laptop HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+
   { id: 'p5', name: 'Laptop HP OMNIBOOK', image: 'assets/omni-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
   { id: 'p6', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
   { id: 'p7', name: 'Climatiseurs', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
