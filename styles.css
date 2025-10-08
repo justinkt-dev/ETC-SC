@@ -22,10 +22,10 @@ html,body{margin:0;padding:0;font-family:"JetBrains Mono",ui-monospace,SFMono-Re
 .btn.large{padding:12px 18px;font-size:1.05rem}
 .btn.outline{background:transparent;border:1px solid var(--ring)}
 .navbar{background:#d11f1f;position:sticky;top:0;z-index:50}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
-.menu{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:8px 0;flex-wrap:nowrap}
+.menu{list-style:none;display:flex;gap:18px;margin:0;padding:0;flex-shrink:0}
 .menu a{color:#fff;text-decoration:none;font-weight:600;position:relative;display:inline-block}
-.search{display:flex;gap:8px}
+.search{display:flex;gap:8px;flex-shrink:0}
 .search input{padding:8px 10px;border-radius:8px;border:1px solid var(--ring);min-width:260px}
 .search button[type="submit"]{font-weight:700}
 
