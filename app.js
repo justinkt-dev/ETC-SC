@@ -289,6 +289,59 @@ function wireThemeToggle() {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 }
+
+function wireMobileMenu() {
+  const toggle = document.getElementById('mobileMenuToggle');
+  const navbar = document.getElementById('navbar');
+  
+  if (!toggle || !navbar) return;
+  
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navbar.classList.toggle('active');
+  });
+  
+  // Close menu when clicking on a link
+  navbar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggle.classList.remove('active');
+      navbar.classList.remove('active');
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !toggle.contains(e.target)) {
+      toggle.classList.remove('active');
+      navbar.classList.remove('active');
+    }
+  });
+}
+
+function wireSidebarToggle() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  
+  if (!toggle || !sidebar) return;
+  
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+  
+  // Close sidebar when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
+      sidebar.classList.remove('active');
+    }
+  });
+  
+  // Close sidebar when clicking on a link inside
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
+  });
+}
 // quick request removed
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts('all');
@@ -300,6 +353,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setYear();
   startHeroRotation();
   wireThemeToggle();
+  wireMobileMenu();
+  wireSidebarToggle();
   // Make all "Nouveautés" links reactive (header + footer)
   document.querySelectorAll('a[href="#nouveaux"]').forEach(link => {
     link.addEventListener('click', (e) => {

@@ -17,12 +17,19 @@
           <span class="brand-name">ETC SC Corporation</span>
         </div>
         <div class="contact-mini">
-          <span>Appelez-nous: <strong>+224 623989798 | +224 620874088</strong></span>
-          <a class="btn primary small" href="#contact">Contact</a>
-          <button id="themeToggle" class="btn primary small" type="button">Thème</button>
+          <span class="contact-phone">Appelez-nous: <strong>+224 623989798 | +224 620874088</strong></span>
+          <div class="contact-buttons">
+            <a class="btn primary small" href="#contact">Contact</a>
+            <button id="themeToggle" class="btn primary small" type="button">Thème</button>
+          </div>
         </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <div class="container nav-inner">
           <ul class="menu">
             <li><a href="#">Accueil</a></li>
@@ -43,8 +50,10 @@
         <div class="container hero-inner">
           <div class="hero-text">
             <h1>ETC SC Corporation</h1>
-            <p>Solutions simples et fiables pour l'impression, l'informatique et la sécurité. Abonnez-vous à notre newsletter pour recevoir les dernières nouveautés.</p><br>
-            <a href="#produits" class="btn primary large">Découvrir</a> <br>
+            <p>Solutions simples et fiables pour l'impression, l'informatique et la sécurité. Abonnez-vous à notre newsletter pour recevoir les dernières nouveautés.</p>
+            <div class="hero-actions">
+              <a href="#produits" class="btn primary large">Découvrir</a>
+            </div>
             <div class="hero-info">
               <div class="info-line">
                 <!-- location icon -->
@@ -74,13 +83,20 @@
       </section>
 
       <section class="categories container" id="produits">
-        <aside class="sidebar">
+        <div class="sidebar-toggle-container">
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <span>Filtres</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <aside class="sidebar" id="sidebar">
           <div class="panel">
             <h3>Meilleures ventes</h3>
             <ul class="list compact" id="topSellers">
               <!-- Injecté par JS -->
             </ul>
-            
           </div>
           <div class="panel">
             <h3>Gammes proposées</h3>
@@ -126,12 +142,24 @@
       </section>
 
       <section id="contact" class="contact container">
-        <h1>Contactez-nous</h1>
-        <p style="font-size: 1.15rem;">Laissez vos coordonnées et votre message, nous revenons vers vous rapidement.</p>
-        <div class="contact-actions" style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:16px;">
-          <a class="btn primary large" style="flex:1; text-align:center;" target="_blank" rel="noreferrer" href="https://m.me/sita.camara.90">Contactez-nous Sur Messenger</a>
+        <div class="contact-header">
+          <h1>Contactez-nous</h1>
+          <p>Laissez vos coordonnées et votre message, nous revenons vers vous rapidement.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary large contact-btn" target="_blank" rel="noreferrer" href="https://m.me/sita.camara.90">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+            </svg>
+            <span>Contactez-nous Sur Messenger</span>
+          </a>
           <a class="btn primary large" style="flex:1; text-align:center;" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=224666958301&text=Lien%C2%A0%3A%0Ahttps%3A%2F%2Ffb.me%2F3ASBAsGrl%0A%0ABonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&source_url=https%3A%2F%2Ffb.me%2F3ASBAsGrl&icebreaker=Bonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&app=facebook&entry_point=post_cta&jid=224666958301%40s.whatsapp.net&lid=48262581096511%40lid&show_ad_attribution=1&source=FB_Post&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NTk3NTYyOTksInBob25lIjoiMjI0NjY2OTU4MzAxIiwidGV4dCI6IkxpZW5cdTAwYTA6XG5odHRwczpcL1wvZmIubWVcLzNBU0JBc0dybFxuXG5Cb25qb3VyXHUwMGEwISBQdWlzLWplIGVuIHNhdm9pciBwbHVzIFx1MDBlMCBjZSBzdWpldFx1MDBhMD8iLCJzb3VyY2VfdXJsIjoiaHR0cHM6XC9cL2ZiLm1lXC8zQVNCQXNHcmwiLCJpY2VicmVha2VyIjoiQm9uam91clx1MDBhMCEgUHVpcy1qZSBlbiBzYXZvaXIgcGx1cyBcdTAwZTAgY2Ugc3VqZXRcdTAwYTA_IiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBvc3RfY3RhIiwiamlkIjoiMjI0NjY2OTU4MzAxXHUwMDQwcy53aGF0c2FwcC5uZXQiLCJsaWQiOiI0ODI2MjU4MTA5NjUxMVx1MDA0MGxpZCIsInNob3dfYWRfYXR0cmlidXRpb24iOjEsInNvdXJjZSI6IkZCX1Bvc3QiLCJzb3VyY2VfaWQiOiIxMjIwOTU0NDc3NjAyNTc3NjkiLCJjb250ZXh0IjoiQWZkRUZreVJqQWRPMWJvWTdua3pIRDRxVnRiWkVoLU9rNmJrSDZEWlFRQ1A5V3V1SmhGeFJldUg3bkxwSWQ0RTE0YU4xT0hlUW9yOHBLeGR4NUtKak1lVGZUU3VoQi1wLXJnRFIyV1dBX1hHelNwVGlJZ3RYUTFrZDdTSDJsSTR5bWpjUk44NTNEZ1FwQnhrUGRkMmNiYmFLU0x5aUcwbldFMnhEWWljVTlNVFJsSXh1TWdaTDJPMGx6NlJURnVFTGh3d1JVcE92STh4MkVXMmQxS3h6T1FLdnJFaDJqYjZOZ2RaT004dE90TXo4NUxDcGw5dEc2SERCaFM5NndzcWphZktVNmNVckt5VFdZNERaSzZ1ajFkNmw0T2ZPdWtldktCSzcyMzZOMVFGbzVfLUNIRW9FUmhXOGVENms3VHJaMVlmVkhLYXhydFA2SUhYellVb3B5TzdqMkxsdFljMUd4Y1dSVGJ0alQwWlBkMmUxQ1QyIn0.fNknohtQNmyKxCytPzcWPFgmaX-SlVU9lTegdr20iNZ0cCTOT9UCqZLQusxZKl65QEhnwkqVAKnREcqDMxNTTw">Contactez-nous Sur WhatsApp</a>
-          <div class="btn primary large" style="flex:1; text-align:center; font-weight:700;">+224 620874088</div>
+          <div class="btn primary large contact-btn phone-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+            </svg>
+            <span>+224 620874088</span>
+          </div>
         </div>
       </section>
       
@@ -139,16 +167,24 @@
 
     <footer class="footer">
       <div class="container footer-inner">
-        <div class="links">
-          <a href="#">Accueil</a>
-          <a href="#produits">Produits</a>
-          <a href="#nouveaux">Nouveautés</a>
-          <a href="#contact">Contact</a>
+        <div class="footer-content">
+          <div class="footer-links">
+            <h4>Navigation</h4>
+            <div class="links">
+              <a href="#">Accueil</a>
+              <a href="#produits">Produits</a>
+              <a href="#nouveaux">Nouveautés</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+          <div class="footer-search">
+            <h4>Recherche</h4>
+            <form class="search" id="footerSearchForm">
+              <input type="search" id="footerSearchInput" placeholder="Rechercher un produit…" aria-label="Recherche (pied de page)">
+              <button type="submit" class="btn primary">Chercher</button>
+            </form>
+          </div>
         </div>
-        <form class="search" id="footerSearchForm">
-          <input type="search" id="footerSearchInput" placeholder="Rechercher un produit…" aria-label="Recherche (pied de page)">
-          <button type="submit" class="btn primary">Chercher</button>
-        </form>
       </div>
       <div class="container legal">
         <small>© <span id="year"></span> ETC SC Corp. | Kaloum, Marché Niger à côté de la banque Afriland, Conakry, Guinea | Lundi-Vendredi: 08:00-17:00 & Samedi: 08:00-15:00</small>
