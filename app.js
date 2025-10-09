@@ -45,38 +45,51 @@ const products = [
 
   { id: 'p30', name: 'HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p31', name: 'HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p32', name: 'HP Core Ultra 7, 16 GB RAM, 1 TB SSD', image: 'assets/hpcore-ultra7.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
 
-  { id: 'p40', name: 'Laptop HP OMNIBOOK', image: 'assets/omni-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+
+  { id: 'p40', name: 'HP Omni Book 5, i5, 8 GB RAM, 512 GB SSD', image: 'assets/omni-book5.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
   
-  { id: 'p6', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
-  { id: 'p7', name: 'Climatiseurs', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
+  { id: 'p46', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
+  { id: 'p47', name: 'Climatiseurs 9000 BTU, 12000 BTU', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
   
   { id: 'p50', name: 'Desktop All in one 12e et 13e génération i5, 8 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p51', name: 'Desktop All in one 12e et 13e génération i5, 16 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p52', name: 'Desktop All in one 12e et 13e génération i7, 8 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p53', name: 'Desktop All in one 12e et 13e génération i7, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
 
-  { id: 'p9', name: 'Desktop HP 290', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
+  { id: 'p55', name: 'Desktop HP 290 i5, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB SSD' } },
+  { id: 'p56', name: 'Desktop HP 290 i7, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
   
-  { id: 'p60', name: 'Chargeurs HP', image: 'assets/chargers.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
-  { id: 'p61', name: 'Chargeurs DELL', image: 'assets/chargers.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
-  { id: 'p62', name: 'Chargeurs Lenovo', image: 'assets/chargers.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p60', name: 'Chargeurs HP Type-C 65W', image: 'assets/hp-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
+  { id: 'p61', name: 'Chargeurs DELL Type-C 65W', image: 'assets/dell-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p62', name: 'Chargeurs Lenovo Type-C 65W', image: 'assets/lenovo-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p63', name: 'Rallonge Electrique APC', image: 'assets/ext-apc.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p64', name: 'Rallonge Electrique Tripplite', image: 'assets/ext-trip.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
 
 
-  { id: 'p11', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
-  { id: 'p12', name: 'Encre HP Toner', image: 'assets/hptoner-ink.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
-  { id: 'p13', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
-  { id: 'p14', name: 'Encre RICOH', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
-  { id: 'p15', name: 'Type de Câbles', image: 'assets/cables.webp', category: 'accessory', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
-  { id: 'p16', name: 'Souris', image: 'assets/mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
-  { id: 'p17', name: "Verrous d'ordinateur", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
-  { id: 'p18', name: 'Casque stéréo', image: 'assets/stereo-hs.webp', category: 'accessory', isNew: true, specs: { Type: 'Casque', Categories: 'Stereo' } },
-  { id: 'p19', name: 'Adaptateur Type C Rj45', image: 'assets/adapt.webp', category: 'accessory', isNew: true, specs: { Type: 'Adaptateur', Categories: 'Type C Rj45' } },
-  { id: 'p20', name: 'Switch', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
+  { id: 'p70', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
+  { id: 'p71', name: 'Encre HP Toner', image: 'assets/hptoner-ink.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
+  { id: 'p72', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
+  { id: 'p73', name: 'Encre RICOH', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
+  
+  { id: 'p15', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'accessory', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
+  
+  { id: 'p80', name: 'Souris Pour HP', image: 'assets/hp-mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
+  { id: 'p81', name: 'Souris Pour Logitech', image: 'assets/log-mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
+  { id: 'p82', name: 'Souris Pour Dell', image: 'assets/dell-mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
+
+  
+  { id: 'p90', name: "Verrous d'ordinateur", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
+  { id: 'p91', name: 'Casque stéréo', image: 'assets/stereo-hs.webp', category: 'accessory', isNew: true, specs: { Type: 'Casque', Categories: 'Stereo' } },
+  { id: 'p92', name: 'Adaptateur Type C Rj45', image: 'assets/adapt.webp', category: 'accessory', isNew: true, specs: { Type: 'Adaptateur', Categories: 'Type C Rj45' } },
+  { id: 'p92', name: 'Switch', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
+  { id: 'p94', name: 'Souffleur electronique', image: 'assets/soufler.webp', category: 'accessory', isNew: true, specs: { Type: 'Accessoires', Categories: 'Souffleur electronique' } },
+
   // { id: 'p21', name: 'Imprimantes', image: 'assets/ro.webp', category: 'router', isNew: true, specs: { Type: 'Routeur', Categories: '4G LTE | 5G | Wifi' } },
 
 
-  { id: 'p21', name: 'Imprimantes', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
+  { id: 'p21', name: 'Imprimantes Canon', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
   // { id: 'p3', name: 'Encre Universelle CMYK (Pack)', image: 'assets/inc-pack.webp', category: 'ink', specs: { Compatibilité: 'Jet d’encre', Rendement: 'Jusqu’à 5000 pages' } },
   { id: 'p22', name: 'Nettoyant pour appareils (Kit)', image: 'assets/cleaner-kit.webp', category: 'cleaner', bestSeller: true, specs: { Contenu: 'Spray + chiffon', Volume: '200 ml' } },
   // { id: 'p6', name: 'Laptop UltraFin 15"',image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'AMD Ryzen 7', RAM: '16 Go', Poids: '1.4 kg' } },
