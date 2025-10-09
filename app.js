@@ -8,7 +8,7 @@ const CONTACT = {
 
 // Choose which product IDs to feature in "Meilleures ventes" (leave empty to auto-pick first 8)
 // Example: ['p23','p21','p25','p26']
-const TOP_SELLER_IDS = ['p1','p20','p41','p33','p5','p13'];
+const TOP_SELLER_IDS = ['p1','p20','p40','p60', 'p71', 'p112'];
 
 function buildWhatsAppUrl(phone, message) {
   const base = 'https://api.whatsapp.com/send';
@@ -30,13 +30,13 @@ function buildWhatsAppUrl(phone, message) {
 // Central email configuration for outbound requests/notifications
 const products = [
   // { id: 'p1', name: 'Ordinateur Portable Pro 14"', image: 'assets/ordi-portable.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 Go', Stockage: '512 Go SSD' } },
-  { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', bestSeller: true, category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
   { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
   
   { id: 'p10', name: 'HP Victus 13e génération i7, 16 GB RAM, 512 GB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Graphics: '6 GB C.G', Stockage: '512 GB SSD' } },
   { id: 'p11', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
 
-  { id: 'p20', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p20', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 8 GB RAM, 512 GB SSD', bestSeller: true, image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
   { id: 'p21', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3', RAM: '16 GB', Stockage: '512 GB SSD' } },
   { id: 'p22', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
   { id: 'p23', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
@@ -48,7 +48,7 @@ const products = [
   { id: 'p32', name: 'HP Core Ultra 7, 16 GB RAM, 1 TB SSD', image: 'assets/hpcore-ultra7.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
 
 
-  { id: 'p40', name: 'HP Omni Book 5, i5, 8 GB RAM, 512 GB SSD', image: 'assets/omni-book5.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p40', name: 'HP Omni Book 5, i5, 8 GB RAM, 512 GB SSD', image: 'assets/omni-book5.webp', bestSeller: true, category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
   
   { id: 'p46', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
   { id: 'p47', name: 'Climatiseurs 9000 BTU, 12000 BTU', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
@@ -60,7 +60,7 @@ const products = [
   { id: 'p55', name: 'Desktop HP 290 i5, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB SSD' } },
   { id: 'p56', name: 'Desktop HP 290 i7, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
   
-  { id: 'p60', name: 'Chargeurs HP Type-C 65W', image: 'assets/hp-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
+  { id: 'p60', name: 'Chargeurs HP Type-C 65W', image: 'assets/hp-charger.webp', bestSeller: true, category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
   { id: 'p61', name: 'Chargeurs DELL Type-C 65W', image: 'assets/dell-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
   { id: 'p62', name: 'Chargeurs Lenovo Type-C 65W', image: 'assets/lenovo-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
   { id: 'p63', name: 'Rallonge Electrique APC 1.8 M cord, 5 Outlets', image: 'assets/ext-apc.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC' } },
@@ -76,9 +76,9 @@ const products = [
   { id: 'p73', name: 'Encre RICOH', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
   
   
-  { id: 'p80', name: 'Souris Pour HP', image: 'assets/hp-mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
-  { id: 'p81', name: 'Souris Pour Logitech', image: 'assets/log-mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
-  { id: 'p82', name: 'Souris Pour Dell', image: 'assets/dell-mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
+  { id: 'p80', name: 'Souris Pour HP', image: 'assets/hp-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
+  { id: 'p81', name: 'Souris Pour Logitech', image: 'assets/log-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
+  { id: 'p82', name: 'Souris Pour Dell', image: 'assets/dell-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
 
   
   { id: 'p90', name: "Verrous d'ordinateur", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
@@ -101,7 +101,7 @@ const products = [
   
   { id: 'p110', name: 'Support Laptop Light Weight', image: 'assets/lapt-stand.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Light Weight | Portable' } },
   { id: 'p111', name: 'Support Laptop', image: 'assets/stand-fan.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Tablette | Portable' } },
-  { id: 'p112', name: 'Spray Nettoyant Écran', image: 'assets/foam-cleaner.webp', category: 'cleaner', specs: { Sans_alcool: 'Oui', Volume: '100 ml' } },
+  { id: 'p112', name: 'Spray Nettoyant Écran', image: 'assets/foam-cleaner.webp', bestSeller: true, category: 'cleaner', specs: { Sans_alcool: 'Oui', Volume: '100 ml' } },
   { id: 'p113', name: 'Nettoyeurs - Air Dust', image: 'assets/air-dust.webp', category: 'cleaner', specs: { Type: 'Netoyyant', Marque: 'Hisense', Capacité: '7 Kg' } },
   { id: 'p114', name: 'Routeur Tp‑Link', image: 'assets/router-tp.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
   { id: 'p115', name: 'Routeur 4G LTE D‑Link DWR‑M921', image: 'assets/router.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
@@ -110,6 +110,7 @@ const products = [
   { id: 'p118', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'accessory', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu’à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
 
 ];
+
 function createProductCard(product) {
   const card = document.createElement('article');
   card.className = 'card';
