@@ -8,7 +8,7 @@ const CONTACT = {
 
 // Choose which product IDs to feature in "Meilleures ventes" (leave empty to auto-pick first 8)
 // Example: ['p23','p21','p25','p26']
-const TOP_SELLER_IDS = ['p22','p41','p33','p5','p13'];
+const TOP_SELLER_IDS = ['p1','p20','p41','p33','p5','p13'];
 
 function buildWhatsAppUrl(phone, message) {
   const base = 'https://api.whatsapp.com/send';
@@ -150,6 +150,28 @@ function activateFilters() {
     const target = p.dataset.filter;
     renderProducts(target);
   }));
+
+  // Mirror filters from the sidebar "Gammes proposées"
+  const svc = document.getElementById('servicesFilters');
+  if (svc) {
+    svc.querySelectorAll('li[data-filter]').forEach(li => {
+      const apply = () => {
+        const target = li.getAttribute('data-filter') || 'all';
+        // Sync top pills active state for visual consistency
+        document.querySelectorAll('.pills .pill').forEach(el => el.classList.remove('active'));
+        document.querySelector(`.pills .pill[data-filter="${target}"]`)?.classList.add('active');
+        renderProducts(target);
+        document.getElementById('produits')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+      li.addEventListener('click', apply);
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          apply();
+        }
+      });
+    });
+  }
 }
 function renderTopSellers() {
   const ul = document.getElementById('topSellers');
