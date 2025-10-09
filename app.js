@@ -2,8 +2,12 @@
 // Central email configuration for outbound requests/notifications
 const products = [
   // { id: 'p1', name: 'Ordinateur Portable Pro 14"', image: 'assets/ordi-portable.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 Go', Stockage: '512 Go SSD' } },
-  { id: 'p1', name: 'Laptop HP Omen 13th génération', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB | 32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
-  { id: 'p2', name: 'Laptop HP Victus 13th génération', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB | 32 GB', Graphics: '6 GB C.G', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  
+  { id: 'p3', name: 'HP Victus 13e génération i7, 16 GB RAM, 512 GB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Graphics: '6 GB C.G', Stockage: '512 GB SSD' } },
+  { id: 'p4', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
+
   { id: 'p3', name: 'Laptop HP 12th et 13th génération Note-Book & Pro-Book', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3 | i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
   { id: 'p4', name: 'Laptop HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p5', name: 'Laptop HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
