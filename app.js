@@ -1,21 +1,57 @@
 "use strict";
+// Global configuration for contact details and shared helpers
+const CONTACT = {
+  whatsapp: '224666958301',
+  phonePrimary: '+224 623989798',
+  phoneSecondary: '+224 620874088'
+};
+
+function buildWhatsAppUrl(phone, message) {
+  const base = 'https://api.whatsapp.com/send';
+  const params = new URLSearchParams({
+    phone: String(phone || '').replace(/\s+/g, ''),
+    text: message || 'Bonjour ! Puis-je en savoir plus à ce sujet ?'
+  });
+  return `${base}?${params.toString()}`;
+}
+
+// Lightweight version banner (one-time)
+(() => {
+  if (!window.__etcAppBootLogged) {
+    window.__etcAppBootLogged = true;
+    // eslint-disable-next-line no-console
+    console.log('[ETC SC Corp] App initialized • contact:', CONTACT.phonePrimary, CONTACT.phoneSecondary);
+  }
+})();
 // Central email configuration for outbound requests/notifications
 const products = [
   // { id: 'p1', name: 'Ordinateur Portable Pro 14"', image: 'assets/ordi-portable.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 Go', Stockage: '512 Go SSD' } },
   { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
   { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
   
-  { id: 'p3', name: 'HP Victus 13e génération i7, 16 GB RAM, 512 GB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Graphics: '6 GB C.G', Stockage: '512 GB SSD' } },
-  { id: 'p4', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p10', name: 'HP Victus 13e génération i7, 16 GB RAM, 512 GB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Graphics: '6 GB C.G', Stockage: '512 GB SSD' } },
+  { id: 'p11', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
 
-  { id: 'p3', name: 'Laptop HP 12th et 13th génération Note-Book & Pro-Book', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3 | i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
-  { id: 'p4', name: 'Laptop HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p5', name: 'Laptop HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p20', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p21', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p22', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p23', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p24', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i7, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p25', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i7, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Stockage: '512 GB SSD' } },
 
-  { id: 'p5', name: 'Laptop HP OMNIBOOK', image: 'assets/omni-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p30', name: 'HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p31', name: 'HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+
+  { id: 'p40', name: 'Laptop HP OMNIBOOK', image: 'assets/omni-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  
   { id: 'p6', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
   { id: 'p7', name: 'Climatiseurs', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
-  { id: 'p8', name: 'Desktop All in one 12th et 13th génération', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  
+  { id: 'p50', name: 'Desktop All in one 12e et 13e génération i5, 8 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p51', name: 'Desktop All in one 12e et 13e génération i5, 16 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p52', name: 'Desktop All in one 12e et 13e génération i7, 8 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p53', name: 'Desktop All in one 12e et 13e génération i7, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
+
   { id: 'p9', name: 'Desktop HP 290', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
   { id: 'p10', name: 'Chargeurs', image: 'assets/chargers.webp', category: 'accessory', isNew: true, specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
   { id: 'p11', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
@@ -66,7 +102,7 @@ function createProductCard(product) {
     <h4>${product.name}</h4>
     <div class="muted">Disponible</div>
     <div class="actions">
-      <a class="btn primary" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=224666958301&text=Lien%C2%A0%3A%0Ahttps%3A%2F%2Ffb.me%2F3ASBAsGrl%0A%0ABonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&source_url=https%3A%2F%2Ffb.me%2F3ASBAsGrl&icebreaker=Bonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&app=facebook&entry_point=post_cta&jid=224666958301%40s.whatsapp.net&lid=48262581096511%40lid&show_ad_attribution=1&source=FB_Post&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NTk3NTYyOTksInBob25lIjoiMjI0NjY2OTU4MzAxIiwidGV4dCI6IkxpZW5cdTAwYTA6XG5odHRwczpcL1wvZmIubWVcLzNBU0JBc0dybFxuXG5Cb25qb3VyXHUwMGEwISBQdWlzLWplIGVuIHNhdm9pciBwbHVzIFx1MDBlMCBjZSBzdWpldFx1MDBhMD8iLCJzb3VyY2VfdXJsIjoiaHR0cHM6XC9cL2ZiLm1lXC8zQVNCQXNHcmwiLCJpY2VicmVha2VyIjoiQm9uam91clx1MDBhMCEgUHVpcy1qZSBlbiBzYXZvaXIgcGx1cyBcdTAwZTAgY2Ugc3VqZXRcdTAwYTA_IiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBvc3RfY3RhIiwiamlkIjoiMjI0NjY2OTU4MzAxXHUwMDQwcy53aGF0c2FwcC5uZXQiLCJsaWQiOiI0ODI2MjU4MTA5NjUxMVx1MDA0MGxpZCIsInNob3dfYWRfYXR0cmlidXRpb24iOjEsInNvdXJjZSI6IkZCX1Bvc3QiLCJzb3VyY2VfaWQiOiIxMjIwOTU0NDc3NjAyNTc3NjkiLCJjb250ZXh0IjoiQWZkRUZreVJqQWRPMWJvWTdua3pIRDRxVnRiWkVoLU9rNmJrSDZEWlFRQ1A5V3V1SmhGeFJldUg3bkxwSWQ0RTE0YU4xT0hlUW9yOHBLeGR4NUtKak1lVGZUU3VoQi1wLXJnRFIyV1dBX1hHelNwVGlJZ3RYUTFrZDdTSDJsSTR5bWpjUk44NTNEZ1FwQnhrUGRkMmNiYmFLU0x5aUcwbldFMnhEWWljVTlNVFJsSXh1TWdaTDJPMGx6NlJURnVFTGh3d1JVcE92STh4MkVXMmQxS3h6T1FLdnJFaDJqYjZOZ2RaT004dE90TXo4NUxDcGw5dEc2SERCaFM5NndzcWphZktVNmNVckt5VFdZNERaSzZ1ajFkNmw0T2ZPdWtldktCSzcyMzZOMVFGbzVfLUNIRW9FUmhXOGVENms3VHJaMVlmVkhLYXhydFA2SUhYellVb3B5TzdqMkxsdFljMUd4Y1dSVGJ0alQwWlBkMmUxQ1QyIn0.fNknohtQNmyKxCytPzcWPFgmaX-SlVU9lTegdr20iNZ0cCTOT9UCqZLQusxZKl65QEhnwkqVAKnREcqDMxNTTw">Contactez +224 623989798</a>
+      <a class="btn primary" target="_blank" rel="noreferrer" href="${buildWhatsAppUrl(CONTACT.whatsapp, 'Bonjour ! Puis-je en savoir plus à ce sujet ?')}">Contactez ${CONTACT.phonePrimary}</a>
       <button class="btn primary" data-details data-id="${product.id}">Voir détails</button>
     </div>
   `;
