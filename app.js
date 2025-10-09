@@ -26,8 +26,8 @@ function buildWhatsAppUrl(phone, message) {
 // Central email configuration for outbound requests/notifications
 const products = [
   // { id: 'p1', name: 'Ordinateur Portable Pro 14"', image: 'assets/ordi-portable.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 Go', Stockage: '512 Go SSD' } },
-  { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
-  { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD, 8GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
   
   { id: 'p10', name: 'HP Victus 13e génération i7, 16 GB RAM, 512 GB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Graphics: '6 GB C.G', Stockage: '512 GB SSD' } },
   { id: 'p11', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
