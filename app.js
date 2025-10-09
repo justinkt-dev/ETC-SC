@@ -1,10 +1,14 @@
 "use strict";
 // Global configuration for contact details and shared helpers
 const CONTACT = {
-  whatsapp: '224666958301',
+  whatsapp: '+224666958301',
   phonePrimary: '+224 623989798',
   phoneSecondary: '+224 620874088'
 };
+
+// Choose which product IDs to feature in "Meilleures ventes" (leave empty to auto-pick first 8)
+// Example: ['p23','p21','p25','p26']
+const TOP_SELLER_IDS = ['p22','p41','p33','p5','p13'];
 
 function buildWhatsAppUrl(phone, message) {
   const base = 'https://api.whatsapp.com/send';
@@ -53,7 +57,12 @@ const products = [
   { id: 'p53', name: 'Desktop All in one 12e et 13e génération i7, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
 
   { id: 'p9', name: 'Desktop HP 290', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
-  { id: 'p10', name: 'Chargeurs', image: 'assets/chargers.webp', category: 'accessory', isNew: true, specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  
+  { id: 'p60', name: 'Chargeurs HP', image: 'assets/chargers.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
+  { id: 'p61', name: 'Chargeurs DELL', image: 'assets/chargers.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p62', name: 'Chargeurs Lenovo', image: 'assets/chargers.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+
+
   { id: 'p11', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
   { id: 'p12', name: 'Encre HP Toner', image: 'assets/hptoner-ink.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
   { id: 'p13', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
@@ -121,6 +130,8 @@ function renderProducts(filter = 'all') {
       return !!p.isNew;
     if (filter === 'ordinateurs')
       return p.category === 'laptop' || p.category === 'pc';
+    if (filter === 'printer')
+      return p.category === 'printer' || p.category === 'scanner' || /scanneur|scanner/i.test(p.name || '');
     if (filter === 'others') {
       // Anything not covered by existing pills: ordinateurs(laptop|pc), printer, ink, camera, cleaner
       const covered = new Set(['laptop','pc','printer','ink','camera','cleaner']);
@@ -145,7 +156,11 @@ function renderTopSellers() {
   if (!ul)
     return;
   ul.innerHTML = '';
-  products.slice(0, 8).forEach(p => {
+  const selectedIds = Array.isArray(TOP_SELLER_IDS) ? TOP_SELLER_IDS : [];
+  const items = selectedIds.length
+    ? selectedIds.map(id => products.find(p => p && p.id === id)).filter(Boolean)
+    : products.slice(0, 8);
+  items.forEach(p => {
     const li = document.createElement('li');
     li.innerHTML = `<picture><source type="image/webp" srcset="${p.image}"><img src="${p.image}" alt="${p.name}"></picture><span>${p.name}</span>`;
     ul.appendChild(li);
@@ -187,6 +202,7 @@ function wireDetails() {
       modal.setAttribute('aria-hidden', 'true');
   });
 }
+
 function wireNewsletter() {
   const form = document.getElementById('newsletterForm');
   form?.addEventListener('submit', e => {
@@ -197,6 +213,7 @@ function wireNewsletter() {
     form.reset();
   });
 }
+
 function wireSearch() {
   const form = document.getElementById('searchForm');
   const input = document.getElementById('searchInput');
@@ -231,6 +248,7 @@ function applyProductSearch(q){
   gridEl?.setAttribute('tabindex','-1');
   gridEl?.focus({ preventScroll: true });
 }
+
 function wireContact() {
   const form = document.getElementById('contactForm');
   const flash = document.getElementById('contactFlash');
@@ -253,11 +271,13 @@ function wireContact() {
     form.reset();
   });
 }
+
 function setYear() {
   const yearEl = document.getElementById('year');
   if (yearEl)
     yearEl.textContent = String(new Date().getFullYear());
 }
+
 function startHeroRotation() {
   const container = document.getElementById('heroRotator');
   if (!container)

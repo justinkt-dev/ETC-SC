@@ -1,4 +1,4 @@
-type ProductCategory = 'laptop'|'printer'|'ink'|'camera'|'cleaner';
+type ProductCategory = 'laptop'|'printer'| 'scanner'|'ink'|'camera'|'cleaner';
 
 interface Product {
   id: string;
