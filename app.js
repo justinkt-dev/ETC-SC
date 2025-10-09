@@ -57,7 +57,6 @@ const products = [
   { id: 'p51', name: 'Desktop All in one 12e et 13e génération i5, 16 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p52', name: 'Desktop All in one 12e et 13e génération i7, 8 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p53', name: 'Desktop All in one 12e et 13e génération i7, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
-
   { id: 'p55', name: 'Desktop HP 290 i5, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB SSD' } },
   { id: 'p56', name: 'Desktop HP 290 i7, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
   
@@ -67,7 +66,8 @@ const products = [
   { id: 'p63', name: 'Rallonge Electrique APC 1.8 M cord, 5 Outlets', image: 'assets/ext-apc.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC' } },
   { id: 'p64', name: 'Rallonge Electrique APC USB, Type-C', image: 'assets/ext-apc-c.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC Type-C' } },
   { id: 'p65', name: 'Rallonge Electrique Tripplite 1.8 M cord, 6 Outlets, 220-240W', image: 'assets/ext-trip.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'Tripplite' } },
-  { id: 'p76', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'accessory', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
+  { id: 'p66', name: 'Rallonge Electrique GONGNIU 5 M cord, 6 Outlets, Max 3250W', image: 'assets/ext-gongniu.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC Type-C' } },
+  { id: 'p68', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'accessory', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
 
 
   { id: 'p70', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
@@ -86,19 +86,18 @@ const products = [
   { id: 'p92', name: 'Adaptateur Type C Rj45', image: 'assets/adapt.webp', category: 'accessory', isNew: true, specs: { Type: 'Adaptateur', Categories: 'Type C Rj45' } },
   { id: 'p92', name: 'Switch', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
   { id: 'p94', name: 'Souffleur electronique', image: 'assets/soufler.webp', category: 'accessory', isNew: true, specs: { Type: 'Accessoires', Categories: 'Souffleur electronique' } },
-
-  // { id: 'p21', name: 'Imprimantes', image: 'assets/ro.webp', category: 'router', isNew: true, specs: { Type: 'Routeur', Categories: '4G LTE | 5G | Wifi' } },
+  { id: 'p95', name: 'Boîtier disque dur Externe HHD', image: 'assets/box-hdd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'HHD' } },
+  { id: 'p96', name: 'Boîtier disque dur Externe SDD', image: 'assets/box-ssd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'SSD' } },
 
 
   { id: 'p100', name: 'Imprimantes Canon', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
-  // { id: 'p3', name: 'Encre Universelle CMYK (Pack)', image: 'assets/inc-pack.webp', category: 'ink', specs: { Compatibilité: 'Jet d’encre', Rendement: 'Jusqu’à 5000 pages' } },
   { id: 'p102', name: 'Nettoyant pour appareils (Kit)', image: 'assets/cleaner-kit.webp', category: 'cleaner', bestSeller: true, specs: { Contenu: 'Spray + chiffon', Volume: '200 ml' } },
-  // { id: 'p6', name: 'Laptop UltraFin 15"',image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'AMD Ryzen 7', RAM: '16 Go', Poids: '1.4 kg' } },
-  // { id: 'p7', name: 'Laptop HP Omen 13th génération',image: 'assets/omen-laptop.webp', category: 'laptop', specs: { CPU: 'AMD Ryzen 7', RAM: '16 Go', Poids: '1.4 kg' } },
   { id: 'p103', name: 'Imprimante Laser L500', image: 'assets/printer-lazer.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet' } },
   { id: 'p104', name: 'Caméra Bridge Zoom', image: 'assets/cctv_old.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
-  { id: 'p105', name: 'Scanneur Led 300', image: 'assets/scanner-led.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'Led 300' } },
-  { id: 'p106', name: 'Scanneur HP2600 F1', image: 'assets/scanner-hp.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'HP 2600 F1' } },
+  { id: 'p105', name: 'Caméras Dahua technology', image: 'assets/cctv-dahua.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
+  
+  { id: 'p108', name: 'Scanneur Led 300', image: 'assets/scanner-led.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'Led 300' } },
+  { id: 'p109', name: 'Scanneur HP2600 F1', image: 'assets/scanner-hp.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'HP 2600 F1' } },
   
   { id: 'p110', name: 'Support Laptop Light Weight', image: 'assets/lapt-stand.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Light Weight | Portable' } },
   { id: 'p111', name: 'Support Laptop', image: 'assets/stand-fan.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Tablette | Portable' } },
