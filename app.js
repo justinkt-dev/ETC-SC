@@ -64,8 +64,10 @@ const products = [
   { id: 'p60', name: 'Chargeurs HP Type-C 65W', image: 'assets/hp-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
   { id: 'p61', name: 'Chargeurs DELL Type-C 65W', image: 'assets/dell-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
   { id: 'p62', name: 'Chargeurs Lenovo Type-C 65W', image: 'assets/lenovo-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
-  { id: 'p63', name: 'Rallonge Electrique APC', image: 'assets/ext-apc.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
-  { id: 'p64', name: 'Rallonge Electrique Tripplite', image: 'assets/ext-trip.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p63', name: 'Rallonge Electrique APC 1.8 M cord, 5 Outlets', image: 'assets/ext-apc.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC' } },
+  { id: 'p64', name: 'Rallonge Electrique APC USB, Type-C', image: 'assets/ext-apc-c.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC Type-C' } },
+  { id: 'p65', name: 'Rallonge Electrique Tripplite 1.8 M cord, 6 Outlets, 220-240W', image: 'assets/ext-trip.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'Tripplite' } },
+  { id: 'p76', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'accessory', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
 
 
   { id: 'p70', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
@@ -73,7 +75,6 @@ const products = [
   { id: 'p72', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
   { id: 'p73', name: 'Encre RICOH', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
   
-  { id: 'p15', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'accessory', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
   
   { id: 'p80', name: 'Souris Pour HP', image: 'assets/hp-mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
   { id: 'p81', name: 'Souris Pour Logitech', image: 'assets/log-mouse.webp', category: 'accessory', isNew: true, specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
@@ -89,27 +90,26 @@ const products = [
   // { id: 'p21', name: 'Imprimantes', image: 'assets/ro.webp', category: 'router', isNew: true, specs: { Type: 'Routeur', Categories: '4G LTE | 5G | Wifi' } },
 
 
-  { id: 'p21', name: 'Imprimantes Canon', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
+  { id: 'p100', name: 'Imprimantes Canon', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
   // { id: 'p3', name: 'Encre Universelle CMYK (Pack)', image: 'assets/inc-pack.webp', category: 'ink', specs: { Compatibilité: 'Jet d’encre', Rendement: 'Jusqu’à 5000 pages' } },
-  { id: 'p22', name: 'Nettoyant pour appareils (Kit)', image: 'assets/cleaner-kit.webp', category: 'cleaner', bestSeller: true, specs: { Contenu: 'Spray + chiffon', Volume: '200 ml' } },
+  { id: 'p102', name: 'Nettoyant pour appareils (Kit)', image: 'assets/cleaner-kit.webp', category: 'cleaner', bestSeller: true, specs: { Contenu: 'Spray + chiffon', Volume: '200 ml' } },
   // { id: 'p6', name: 'Laptop UltraFin 15"',image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'AMD Ryzen 7', RAM: '16 Go', Poids: '1.4 kg' } },
   // { id: 'p7', name: 'Laptop HP Omen 13th génération',image: 'assets/omen-laptop.webp', category: 'laptop', specs: { CPU: 'AMD Ryzen 7', RAM: '16 Go', Poids: '1.4 kg' } },
-  { id: 'p23', name: 'Imprimante Laser L500', image: 'assets/printer-lazer.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet' } },
-  { id: 'p24', name: 'Caméra Bridge Zoom', image: 'assets/cctv_old.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
-  { id: 'p25', name: 'Scanneur Led 300', image: 'assets/scanner-led.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'Led 300' } },
-  { id: 'p26', name: 'Scanneur HP2600 F1', image: 'assets/scanner-hp.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'HP 2600 F1' } },
+  { id: 'p103', name: 'Imprimante Laser L500', image: 'assets/printer-lazer.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet' } },
+  { id: 'p104', name: 'Caméra Bridge Zoom', image: 'assets/cctv_old.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
+  { id: 'p105', name: 'Scanneur Led 300', image: 'assets/scanner-led.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'Led 300' } },
+  { id: 'p106', name: 'Scanneur HP2600 F1', image: 'assets/scanner-hp.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'HP 2600 F1' } },
   
-  { id: 'p27', name: 'Support Laptop Light Weight', image: 'assets/lapt-stand.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Light Weight | Portable' } },
-  { id: 'p28', name: 'Support Laptop', image: 'assets/stand-fan.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Tablette | Portable' } },
-  { id: 'p29', name: 'Spray Nettoyant Écran', image: 'assets/foam-cleaner.webp', category: 'cleaner', specs: { Sans_alcool: 'Oui', Volume: '100 ml' } },
-  { id: 'p30', name: 'Nettoyeurs - Air Dust', image: 'assets/air-dust.webp', category: 'cleaner', specs: { Type: 'Netoyyant', Marque: 'Hisense', Capacité: '7 Kg' } },
+  { id: 'p110', name: 'Support Laptop Light Weight', image: 'assets/lapt-stand.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Light Weight | Portable' } },
+  { id: 'p111', name: 'Support Laptop', image: 'assets/stand-fan.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Tablette | Portable' } },
+  { id: 'p112', name: 'Spray Nettoyant Écran', image: 'assets/foam-cleaner.webp', category: 'cleaner', specs: { Sans_alcool: 'Oui', Volume: '100 ml' } },
+  { id: 'p113', name: 'Nettoyeurs - Air Dust', image: 'assets/air-dust.webp', category: 'cleaner', specs: { Type: 'Netoyyant', Marque: 'Hisense', Capacité: '7 Kg' } },
+  { id: 'p114', name: 'Routeur Tp‑Link', image: 'assets/router-tp.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
+  { id: 'p115', name: 'Routeur 4G LTE D‑Link DWR‑M921', image: 'assets/router.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
+  { id: 'p116', name: 'Machine a laver', image: 'assets/washing-machine.webp', category: 'accessory', specs: { Type: 'Machine a laver', Marque: 'Hisense', Capacité: '7 Kg' } },
+  { id: 'p117', name: 'Câble HDMI-VGA', image: 'assets/hdmi-vga.webp', category: 'accessory', specs: { Type: 'HDMI-VGA', Résolution: 'Jusqu’à 1080p', Longueur: '1.8 m', Compatibilité: 'PC | Moniteur | Projecteur' } },
+  { id: 'p118', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'accessory', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu’à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
 
-  { id: 'p30', name: 'Routeur Tp‑Link', image: 'assets/router-tp.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
-  { id: 'p31', name: 'Routeur 4G LTE D‑Link DWR‑M921', image: 'assets/router.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
-  { id: 'p32', name: 'Machine a laver', image: 'assets/washing-machine.webp', category: 'accessory', specs: { Type: 'Machine a laver', Marque: 'Hisense', Capacité: '7 Kg' } },
-
-  { id: 'p33', name: 'Câble HDMI-VGA', image: 'assets/hdmi-vga.webp', category: 'accessory', specs: { Type: 'HDMI-VGA', Résolution: 'Jusqu’à 1080p', Longueur: '1.8 m', Compatibilité: 'PC | Moniteur | Projecteur' } },
-  { id: 'p35', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'accessory', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu’à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
 ];
 function createProductCard(product) {
   const card = document.createElement('article');
