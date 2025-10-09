@@ -121,13 +121,15 @@ html.dark .btn.primary, html.dark a.btn.primary{color:#fff}
 .contact-header p{color:var(--muted);font-size:1.1rem;margin:0}
 .contact-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1200px;margin:0 auto}
 .contact-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px 20px;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease;border-radius:12px;font-weight:600}
+.contact-btn span{text-decoration:underline}
 .contact-btn:hover,
 .contact-btn:focus-visible{transform:translateY(-2px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,.12)}
 .contact-btn svg{flex-shrink:0}
 .contact-btn span{text-align:center}
 .phone-btn{cursor:pointer}
-.messenger-btn{background:#1877f2 !important;color:#fff !important}
-.whatsapp-btn{background:#25d366 !important;color:#fff !important}
+.messenger-btn{background:#1877f2 !important;color:#fff !important;text-decoration:underline}
+/* Keep WhatsApp button blue as requested */
+.whatsapp-btn{background:#1877f2 !important;color:#fff !important;text-decoration:underline}
 
 .contact-form{background:var(--panel);border:1px solid var(--ring);border-radius:12px;padding:16px}
 .contact-form .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
@@ -196,6 +198,8 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
 /* Small tablets and large phones */
 @media (max-width: 900px){
   .hero-inner{grid-template-columns:1fr;text-align:center;padding:20px 0}
+  /* Let hero media scale fluidly on mobile/zoom */
+  .hero-media{--hero-w:100%;--hero-h:auto}
   .hero-text h1{font-size:24px}
   .hero-text p{font-size:1rem;line-height:1.5}
   .hero-actions{margin-bottom:20px}
@@ -205,7 +209,8 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .sidebar-toggle-container{display:block}
   .sidebar{position:fixed;top:0;left:0;width:280px;height:100vh;background:var(--panel);border-right:1px solid var(--ring);transform:translateX(-100%);transition:transform 0.3s ease;z-index:1000;overflow-y:auto;padding:20px}
   .sidebar.active{transform:translateX(0)}
-  .products{grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px}
+  /* Use auto-fit for better flexibility on zoom */
+  .products{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px}
   .card{padding:12px}
   .card img{height:220px}
   .services-list{grid-template-columns:1fr 1fr}
@@ -233,7 +238,7 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .hero-text h1{font-size:22px}
   .hero-text p{font-size:0.95rem}
   .hero-info .info-line{padding:8px 10px;font-size:0.85rem}
-  .products{grid-template-columns:repeat(2,1fr);gap:14px;margin-top:10px}
+  .products{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:10px}
   .card{padding:10px}
   .card img{height:200px}
   .card h4{font-size:1rem;margin:8px 0 4px 0}
@@ -255,7 +260,7 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .hero-info .info-line{flex-direction:column;text-align:center;gap:8px;padding:8px 10px;font-size:0.8rem}
   .hero-info .info-line span{font-size:0.8rem}
   .categories{margin:16px auto}
-  .products{grid-template-columns:1fr;gap:12px;margin-top:8px}
+  .products{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
   .card{padding:8px}
   .card img{height:180px}
   .card h4{font-size:0.95rem;margin:6px 0 4px 0}
@@ -272,6 +277,8 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .footer .search{width:100%;max-width:400px;margin:0 auto}
   .modal-content{margin:2vh auto;max-width:95%;padding:12px;max-height:96vh}
   .modal-body{padding:8px;gap:12px}
+  /* Proportional modal image sizing on mobile */
+  .modal-body img{width:100%;height:auto;max-height:48vh;object-fit:contain}
   .modal-body h3{font-size:1.2rem;margin-bottom:12px}
   .modal-close{right:8px;top:6px;padding:4px 8px}
   .sidebar .panel{padding:12px}
