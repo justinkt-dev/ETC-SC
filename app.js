@@ -27,7 +27,7 @@ function buildWhatsAppUrl(phone, message) {
 const products = [
   // { id: 'p1', name: 'Ordinateur Portable Pro 14"', image: 'assets/ordi-portable.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 Go', Stockage: '512 Go SSD' } },
   { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
-  { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD, 8GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
   
   { id: 'p10', name: 'HP Victus 13e génération i7, 16 GB RAM, 512 GB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Graphics: '6 GB C.G', Stockage: '512 GB SSD' } },
   { id: 'p11', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
@@ -74,8 +74,8 @@ const products = [
   // { id: 'p7', name: 'Laptop HP Omen 13th génération',image: 'assets/omen-laptop.webp', category: 'laptop', specs: { CPU: 'AMD Ryzen 7', RAM: '16 Go', Poids: '1.4 kg' } },
   { id: 'p23', name: 'Imprimante Laser L500', image: 'assets/printer-lazer.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet' } },
   { id: 'p24', name: 'Caméra Bridge Zoom', image: 'assets/cctv_old.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
-  { id: 'p25', name: 'Scanneur Led 300', image: 'assets/scanner-led.webp', category: 'accessory', specs: { Type: 'Scanneurs', Categories: 'Led 300' } },
-  { id: 'p26', name: 'Scanneur HP2600 F1', image: 'assets/scanner-hp.webp', category: 'accessory', specs: { Type: 'Scanneurs', Categories: 'HP 2600 F1' } },
+  { id: 'p25', name: 'Scanneur Led 300', image: 'assets/scanner-led.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'Led 300' } },
+  { id: 'p26', name: 'Scanneur HP2600 F1', image: 'assets/scanner-hp.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'HP 2600 F1' } },
   
   { id: 'p27', name: 'Support Laptop Light Weight', image: 'assets/lapt-stand.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Light Weight | Portable' } },
   { id: 'p28', name: 'Support Laptop', image: 'assets/stand-fan.webp', category: 'accessory', specs: { Type: 'Support Laptop', Categories: 'Tablette | Portable' } },
