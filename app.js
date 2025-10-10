@@ -91,7 +91,7 @@ const products = [
   
   { id: 'p90', name: "Verrous d'ordinateur", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
   { id: 'p91', name: 'Casque stéréo', image: 'assets/stereo-hs.webp', category: 'accessory', isNew: true, specs: { Type: 'Casque', Categories: 'Stereo' } },
-  { id: 'p92', name: 'Adaptateur Type C Rj45', image: 'assets/adapt.webp', category: 'accessory', isNew: true, specs: { Type: 'Adaptateur', Categories: 'Type C Rj45' } },
+  { id: 'p92', name: 'Adaptateur Type C Rj45', image: 'assets/adapt.webp', category: 'cables', specs: { Type: 'Adaptateur', Categories: 'Type C Rj45' } },
   { id: 'p92', name: 'Switch', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
   { id: 'p94', name: 'Souffleur electronique', image: 'assets/soufler.webp', category: 'accessory', isNew: true, specs: { Type: 'Accessoires', Categories: 'Souffleur electronique' } },
   { id: 'p95', name: 'Boîtier disque dur Externe HHD', image: 'assets/box-hdd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'HHD' } },
@@ -116,7 +116,7 @@ const products = [
   { id: 'p115', name: 'Routeur 4G LTE D‑Link DWR‑M921', image: 'assets/router.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
   { id: 'p116', name: 'Machine a laver', image: 'assets/washing-machine.webp', category: 'accessory', specs: { Type: 'Machine a laver', Marque: 'Hisense', Capacité: '7 Kg' } },
   { id: 'p117', name: 'Câble HDMI-VGA', image: 'assets/hdmi-vga.webp', category: 'cables', specs: { Type: 'HDMI-VGA', Résolution: 'Jusqu\'à 1080p', Longueur: '1.8 m', Compatibilité: 'PC | Moniteur | Projecteur' } },
-  { id: 'p118', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'accessory', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu\'à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
+  { id: 'p118', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'cables', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu\'à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
 
   // Papeteries - Paper related products
   { id: 'p120', name: 'Papier A4 Blanc 80g', image: 'assets/paper-A4.webp', category: 'papeteries', specs: { Type: 'Papier A4', Grammage: '80g', Couleur: 'Blanc', Quantité: '500 feuilles' } },
