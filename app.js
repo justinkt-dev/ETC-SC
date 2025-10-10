@@ -71,11 +71,11 @@ const products = [
   { id: 'p60', name: 'Chargeurs HP Type-C 65W', image: 'assets/hp-charger.webp', bestSeller: true, category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
   { id: 'p61', name: 'Chargeurs DELL Type-C 65W', image: 'assets/dell-charger.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
   { id: 'p62', name: 'Chargeurs Lenovo Type-C 65W', image: 'assets/lenovo-charger.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
-  { id: 'p63', name: 'Rallonge Electrique APC 1.8 M cord, 5 Outlets', image: 'assets/ext-apc.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC' } },
-  { id: 'p64', name: 'Rallonge Electrique APC USB, Type-C', image: 'assets/ext-apc-c.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC Type-C' } },
-  { id: 'p65', name: 'Rallonge Electrique Tripplite 1.8 M cord, 6 Outlets, 220-240W', image: 'assets/ext-trip.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'Tripplite' } },
-  { id: 'p66', name: 'Rallonge Electrique GONGNIU 5 M cord, 6 Outlets, Max 3250W', image: 'assets/ext-gongniu.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC Type-C' } },
-  { id: 'p68', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'accessory', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
+  { id: 'p63', name: 'Rallonge Electrique APC 1.8 M cord, 5 Outlets', image: 'assets/ext-apc.webp', category: 'rallonge', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC' } },
+  { id: 'p64', name: 'Rallonge Electrique APC USB, Type-C', image: 'assets/ext-apc-c.webp', category: 'rallonge', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC Type-C' } },
+  { id: 'p65', name: 'Rallonge Electrique Tripplite 1.8 M cord, 6 Outlets, 220-240W', image: 'assets/ext-trip.webp', category: 'rallonge', specs: { Type: 'Rallonge Electrique', Cagetories: 'Tripplite' } },
+  { id: 'p66', name: 'Rallonge Electrique GONGNIU 5 M cord, 6 Outlets, Max 3250W', image: 'assets/ext-gongniu.webp', category: 'rallonge', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC Type-C' } },
+  { id: 'p68', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'cables', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
 
 
   { id: 'p70', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
@@ -115,20 +115,20 @@ const products = [
   { id: 'p114', name: 'Routeur Tp‑Link', image: 'assets/router-tp.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
   { id: 'p115', name: 'Routeur 4G LTE D‑Link DWR‑M921', image: 'assets/router.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
   { id: 'p116', name: 'Machine a laver', image: 'assets/washing-machine.webp', category: 'accessory', specs: { Type: 'Machine a laver', Marque: 'Hisense', Capacité: '7 Kg' } },
-  { id: 'p117', name: 'Câble HDMI-VGA', image: 'assets/hdmi-vga.webp', category: 'accessory', specs: { Type: 'HDMI-VGA', Résolution: 'Jusqu’à 1080p', Longueur: '1.8 m', Compatibilité: 'PC | Moniteur | Projecteur' } },
+  { id: 'p117', name: 'Câble HDMI-VGA', image: 'assets/hdmi-vga.webp', category: 'cables', specs: { Type: 'HDMI-VGA', Résolution: 'Jusqu\'à 1080p', Longueur: '1.8 m', Compatibilité: 'PC | Moniteur | Projecteur' } },
   { id: 'p118', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'accessory', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu\'à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
 
   // Papeteries - Paper related products
-  { id: 'p120', name: 'Papier A4 Blanc 80g', image: 'assets/paper-a4.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier A4', Grammage: '80g', Couleur: 'Blanc', Quantité: '500 feuilles' } },
-  { id: 'p121', name: 'Papier A4 Couleur', image: 'assets/paper-color.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier A4', Grammage: '80g', Couleur: 'Multicolore', Quantité: '250 feuilles' } },
-  { id: 'p122', name: 'Agrapheuse Standard', image: 'assets/stapler.webp', category: 'papeteries', isNew: true, specs: { Type: 'Agrapheuse', Capacité: '20 feuilles', Matériau: 'Métal' } },
-  { id: 'p123', name: 'Agrafes Standard', image: 'assets/staples.webp', category: 'papeteries', isNew: true, specs: { Type: 'Agrafes', Taille: '26/6', Quantité: '1000 pièces' } },
-  { id: 'p124', name: 'Perforateur 2 trous', image: 'assets/punch-2hole.webp', category: 'papeteries', isNew: true, specs: { Type: 'Perforateur', Trous: '2', Capacité: '20 feuilles' } },
-  { id: 'p125', name: 'Perforateur 3 trous', image: 'assets/punch-3hole.webp', category: 'papeteries', isNew: true, specs: { Type: 'Perforateur', Trous: '3', Capacité: '20 feuilles' } },
-  { id: 'p126', name: 'Classeur A4', image: 'assets/binder-a4.webp', category: 'papeteries', isNew: true, specs: { Type: 'Classeur', Format: 'A4', Anneaux: '2 ou 4', Couleur: 'Multicolore' } },
+  { id: 'p120', name: 'Papier A4 Blanc 80g', image: 'assets/paper-A4.webp', category: 'papeteries', specs: { Type: 'Papier A4', Grammage: '80g', Couleur: 'Blanc', Quantité: '500 feuilles' } },
+  { id: 'p121', name: 'Papier A4 Couleur', image: 'assets/paper-A4-color.webp', category: 'papeteries', specs: { Type: 'Papier A4', Grammage: '80g', Couleur: 'Multicolore', Quantité: '250 feuilles' } },
+  { id: 'p122', name: 'Agrapheuse Standard', image: 'assets/stapler.webp', category: 'papeteries', specs: { Type: 'Agrapheuse', Capacité: '20 feuilles', Matériau: 'Métal' } },
+  { id: 'p123', name: 'Agrafes Standard', image: 'assets/staples.webp', category: 'papeteries', specs: { Type: 'Agrafes', Taille: '26/6', Quantité: '1000 pièces' } },
+  { id: 'p124', name: 'Perforateur 2 trous', image: 'assets/perform-2trous.webp', category: 'papeteries', specs: { Type: 'Perforateur', Trous: '2', Capacité: '20 feuilles' } },
+  { id: 'p125', name: 'Accessoires Papeterie', image: 'assets/accessoires.webp', category: 'papeteries', specs: { Type: 'Perforateur', Trous: '3', Capacité: '20 feuilles' } },
+  { id: 'p126', name: 'Classeur A4', image: 'assets/binder-A4.webp', category: 'papeteries', isNew: true, specs: { Type: 'Classeur', Format: 'A4', Anneaux: '2 ou 4', Couleur: 'Multicolore' } },
   { id: 'p127', name: 'Chemises cartonnées', image: 'assets/folders.webp', category: 'papeteries', isNew: true, specs: { Type: 'Chemises', Matériau: 'Carton', Format: 'A4', Quantité: '10 pièces' } },
-  { id: 'p128', name: 'Papier photo 10x15', image: 'assets/photo-paper.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier photo', Format: '10x15 cm', Finition: 'Brillant', Quantité: '100 feuilles' } },
-  { id: 'p129', name: 'Papier calque A4', image: 'assets/tracing-paper.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier calque', Format: 'A4', Transparence: 'Haute', Quantité: '50 feuilles' } },
+  // { id: 'p128', name: 'Papier photo 10x15', image: 'assets/photo-paper.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier photo', Format: '10x15 cm', Finition: 'Brillant', Quantité: '100 feuilles' } },
+  // { id: 'p129', name: 'Papier calque A4', image: 'assets/tracing-paper.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier calque', Format: 'A4', Transparence: 'Haute', Quantité: '50 feuilles' } },
 
 ];
 
@@ -166,9 +166,13 @@ function renderProducts(filter = 'all') {
       return p.category === 'laptop' || p.category === 'pc';
     if (filter === 'printer')
       return p.category === 'printer' || p.category === 'scanner' || /scanneur|scanner/i.test(p.name || '');
+    if (filter === 'chargers') {
+      // Include chargers, rallonge, and cables categories
+      return p.category === 'chargers' || p.category === 'rallonge' || p.category === 'cables';
+    }
     if (filter === 'others') {
-      // Anything not covered by existing pills: ordinateurs(laptop|pc), printer, ink, camera, cleaner, papeteries, chargers
-      const covered = new Set(['laptop','pc','printer','ink','camera','cleaner','papeteries','chargers']);
+      // Anything not covered by existing pills: ordinateurs(laptop|pc), printer, ink, camera, cleaner, papeteries, chargers, rallonge, cables
+      const covered = new Set(['laptop','pc','printer','ink','camera','cleaner','papeteries','chargers','rallonge','cables']);
       return !covered.has(p.category);
     }
     return p.category === filter;
