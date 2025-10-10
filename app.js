@@ -80,8 +80,14 @@ const products = [
 
   { id: 'p70', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
   { id: 'p71', name: 'Encre HP Toner', image: 'assets/hptoner-ink.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
-  { id: 'p72', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
-  { id: 'p73', name: 'Encre RICOH', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
+  
+  { id: 'p72', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre Canon', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
+  { id: 'p73', name: 'Encre Canon CEXV33', image: 'assets/canon-CEXV33.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'Canon CEXV33' } },
+  { id: 'p72', name: 'Encre Canon CEXV42', image: 'assets/canon-CEXV42.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'Canon CEXV42' } },
+  { id: 'p73', name: 'Encre Canon CEXV54', image: 'assets/canon-CEXV54.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'Canon CEXV54' } },
+  { id: 'p74', name: 'Encre Canon CEXV60', image: 'assets/canon-CEXV60.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'Canon CEXV60' } },
+
+  { id: 'p79', name: 'Encre RICOH', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
   
   
   { id: 'p80', name: 'Souris Pour HP', image: 'assets/hp-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
@@ -97,6 +103,7 @@ const products = [
   { id: 'p95', name: 'Boîtier disque dur Externe HHD', image: 'assets/box-hdd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'HHD' } },
   { id: 'p96', name: 'Boîtier disque dur Externe SDD', image: 'assets/box-ssd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'SSD' } },
   { id: 'p97', name: 'Antivirus Kaspersky', image: 'assets/kaspersky.webp', category: 'accessory', specs: { Type: 'Antivirus', Categories: 'Kaspersky' } },
+  { id: 'p98', name: 'Licence Office 2021', image: 'assets/licence.webp', category: 'accessory', specs: { Type: 'Licence', Categories: 'Office 2021' } },
 
 
   { id: 'p100', name: 'Imprimantes Canon', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
