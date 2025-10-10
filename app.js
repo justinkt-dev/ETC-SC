@@ -46,12 +46,20 @@ const products = [
   { id: 'p30', name: 'HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p31', name: 'HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p32', name: 'HP Core Ultra 7, 16 GB RAM, 1 TB SSD', image: 'assets/hpcore-ultra7.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p33', name: 'Chargeurs HP', image: 'assets/hp-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
+  { id: 'p34', name: 'Chargeurs Dell', image: 'assets/dell-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
+  { id: 'p35', name: 'Chargeurs Lenovo', image: 'assets/lenovo-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
 
 
   { id: 'p40', name: 'HP Omni Book 5, i5, 8 GB RAM, 512 GB SSD', image: 'assets/omni-book5.webp', bestSeller: true, category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
   
-  { id: 'p46', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
-  { id: 'p47', name: 'Climatiseurs 9000 BTU, 12000 BTU', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
+  { id: 'p42', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
+  { id: 'p43', name: 'Climatiseurs 9000 BTU, 12000 BTU', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
+  { id: 'p44', name: 'Fourniture de bureau', image: 'assets/station.webp', category: 'papeteries', specs: { Type: 'Papeteries' } },
+  { id: 'p45', name: 'Fourniture de bureau', image: 'assets/station2.webp', category: 'papeteries', specs: { Type: 'Papeteries' } },
+  { id: 'p46', name: 'Fourniture de bureau', image: 'assets/station3.webp', category: 'papeteries', specs: { Type: 'Papeteries' } },
+  { id: 'p47', name: 'Enveloppes', image: 'assets/station4.webp', category: 'papeteries', specs: { Type: 'Papeteries' } },
+
   
   { id: 'p50', name: 'Desktop All in one 12e et 13e génération i5, 8 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p51', name: 'Desktop All in one 12e et 13e génération i5, 16 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
@@ -60,9 +68,9 @@ const products = [
   { id: 'p55', name: 'Desktop HP 290 i5, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB SSD' } },
   { id: 'p56', name: 'Desktop HP 290 i7, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
   
-  { id: 'p60', name: 'Chargeurs HP Type-C 65W', image: 'assets/hp-charger.webp', bestSeller: true, category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
-  { id: 'p61', name: 'Chargeurs DELL Type-C 65W', image: 'assets/dell-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
-  { id: 'p62', name: 'Chargeurs Lenovo Type-C 65W', image: 'assets/lenovo-charger.webp', category: 'accessory', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p60', name: 'Chargeurs HP Type-C 65W', image: 'assets/hp-charger.webp', bestSeller: true, category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
+  { id: 'p61', name: 'Chargeurs DELL Type-C 65W', image: 'assets/dell-charger.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
+  { id: 'p62', name: 'Chargeurs Lenovo Type-C 65W', image: 'assets/lenovo-charger.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP | Dell | Lenovo' } },
   { id: 'p63', name: 'Rallonge Electrique APC 1.8 M cord, 5 Outlets', image: 'assets/ext-apc.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC' } },
   { id: 'p64', name: 'Rallonge Electrique APC USB, Type-C', image: 'assets/ext-apc-c.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'APC Type-C' } },
   { id: 'p65', name: 'Rallonge Electrique Tripplite 1.8 M cord, 6 Outlets, 220-240W', image: 'assets/ext-trip.webp', category: 'accessory', specs: { Type: 'Rallonge Electrique', Cagetories: 'Tripplite' } },
@@ -88,6 +96,7 @@ const products = [
   { id: 'p94', name: 'Souffleur electronique', image: 'assets/soufler.webp', category: 'accessory', isNew: true, specs: { Type: 'Accessoires', Categories: 'Souffleur electronique' } },
   { id: 'p95', name: 'Boîtier disque dur Externe HHD', image: 'assets/box-hdd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'HHD' } },
   { id: 'p96', name: 'Boîtier disque dur Externe SDD', image: 'assets/box-ssd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'SSD' } },
+  { id: 'p97', name: 'Antivirus Kaspersky', image: 'assets/kaspersky.webp', category: 'accessory', specs: { Type: 'Antivirus', Categories: 'Kaspersky' } },
 
 
   { id: 'p100', name: 'Imprimantes Canon', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
@@ -107,7 +116,19 @@ const products = [
   { id: 'p115', name: 'Routeur 4G LTE D‑Link DWR‑M921', image: 'assets/router.webp', category: 'router', specs: { Débit: 'Jusqu’à 300 Mbps', Hotspot_WiFi: 'Oui', Couverture: 'Améliorée', Appareils: 'Jusqu’à 32', Réseau: '4G LTE' } },
   { id: 'p116', name: 'Machine a laver', image: 'assets/washing-machine.webp', category: 'accessory', specs: { Type: 'Machine a laver', Marque: 'Hisense', Capacité: '7 Kg' } },
   { id: 'p117', name: 'Câble HDMI-VGA', image: 'assets/hdmi-vga.webp', category: 'accessory', specs: { Type: 'HDMI-VGA', Résolution: 'Jusqu’à 1080p', Longueur: '1.8 m', Compatibilité: 'PC | Moniteur | Projecteur' } },
-  { id: 'p118', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'accessory', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu’à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
+  { id: 'p118', name: 'Hub USB‑C 11‑en‑1 (Multiports)', image: 'assets/usbc-hub.webp', category: 'accessory', specs: { HDMI: '4K @ 30 Hz', VGA: '1080p @ 60 Hz', USB_3_0: 'x3 ports (5 Gbps)', USB_C_PD: 'Jusqu\'à 100 W', Ethernet: 'Gigabit RJ45', Lecteur_cartes: 'SD + microSD', Audio: 'Jack 3.5 mm', Câble: '15 cm intégré', Compatibilité: 'Windows / macOS / Android' } },
+
+  // Papeteries - Paper related products
+  { id: 'p120', name: 'Papier A4 Blanc 80g', image: 'assets/paper-a4.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier A4', Grammage: '80g', Couleur: 'Blanc', Quantité: '500 feuilles' } },
+  { id: 'p121', name: 'Papier A4 Couleur', image: 'assets/paper-color.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier A4', Grammage: '80g', Couleur: 'Multicolore', Quantité: '250 feuilles' } },
+  { id: 'p122', name: 'Agrapheuse Standard', image: 'assets/stapler.webp', category: 'papeteries', isNew: true, specs: { Type: 'Agrapheuse', Capacité: '20 feuilles', Matériau: 'Métal' } },
+  { id: 'p123', name: 'Agrafes Standard', image: 'assets/staples.webp', category: 'papeteries', isNew: true, specs: { Type: 'Agrafes', Taille: '26/6', Quantité: '1000 pièces' } },
+  { id: 'p124', name: 'Perforateur 2 trous', image: 'assets/punch-2hole.webp', category: 'papeteries', isNew: true, specs: { Type: 'Perforateur', Trous: '2', Capacité: '20 feuilles' } },
+  { id: 'p125', name: 'Perforateur 3 trous', image: 'assets/punch-3hole.webp', category: 'papeteries', isNew: true, specs: { Type: 'Perforateur', Trous: '3', Capacité: '20 feuilles' } },
+  { id: 'p126', name: 'Classeur A4', image: 'assets/binder-a4.webp', category: 'papeteries', isNew: true, specs: { Type: 'Classeur', Format: 'A4', Anneaux: '2 ou 4', Couleur: 'Multicolore' } },
+  { id: 'p127', name: 'Chemises cartonnées', image: 'assets/folders.webp', category: 'papeteries', isNew: true, specs: { Type: 'Chemises', Matériau: 'Carton', Format: 'A4', Quantité: '10 pièces' } },
+  { id: 'p128', name: 'Papier photo 10x15', image: 'assets/photo-paper.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier photo', Format: '10x15 cm', Finition: 'Brillant', Quantité: '100 feuilles' } },
+  { id: 'p129', name: 'Papier calque A4', image: 'assets/tracing-paper.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier calque', Format: 'A4', Transparence: 'Haute', Quantité: '50 feuilles' } },
 
 ];
 
@@ -146,8 +167,8 @@ function renderProducts(filter = 'all') {
     if (filter === 'printer')
       return p.category === 'printer' || p.category === 'scanner' || /scanneur|scanner/i.test(p.name || '');
     if (filter === 'others') {
-      // Anything not covered by existing pills: ordinateurs(laptop|pc), printer, ink, camera, cleaner
-      const covered = new Set(['laptop','pc','printer','ink','camera','cleaner']);
+      // Anything not covered by existing pills: ordinateurs(laptop|pc), printer, ink, camera, cleaner, papeteries, chargers
+      const covered = new Set(['laptop','pc','printer','ink','camera','cleaner','papeteries','chargers']);
       return !covered.has(p.category);
     }
     return p.category === filter;
