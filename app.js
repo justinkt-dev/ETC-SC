@@ -450,47 +450,25 @@ function wireMobileMenu() {
 function wireSidebarToggle() {
   const toggle = document.getElementById('sidebarToggle');
   const sidebar = document.getElementById('sidebar');
-  const backdrop = document.getElementById('sidebarBackdrop');
   
   if (!toggle || !sidebar) return;
   
-  function toggleSidebar() {
+  toggle.addEventListener('click', () => {
     sidebar.classList.toggle('active');
-    if (backdrop) {
-      backdrop.classList.toggle('active');
-    }
-  }
-  
-  function closeSidebar() {
-    sidebar.classList.remove('active');
-    if (backdrop) {
-      backdrop.classList.remove('active');
-    }
-  }
-  
-  toggle.addEventListener('click', toggleSidebar);
-  
-  if (backdrop) {
-    backdrop.addEventListener('click', closeSidebar);
-  }
+  });
   
   // Close sidebar when clicking outside
   document.addEventListener('click', (e) => {
-    if (!sidebar.contains(e.target) && !toggle.contains(e.target) && !backdrop?.contains(e.target)) {
-      closeSidebar();
+    if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
+      sidebar.classList.remove('active');
     }
   });
   
   // Close sidebar when clicking on a link inside
   sidebar.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeSidebar);
-  });
-  
-  // Close sidebar on escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && sidebar.classList.contains('active')) {
-      closeSidebar();
-    }
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
   });
 }
 // quick request removed
