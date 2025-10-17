@@ -152,8 +152,16 @@ function createProductCard(product) {
     <h4>${product.name}</h4>
     <div class="muted">Disponible</div>
     <div class="actions">
-      <a class="btn primary" target="_blank" rel="noreferrer" href="${buildWhatsAppUrl(CONTACT.whatsapp, 'Bonjour ! Puis-je en savoir plus à ce sujet ?')}">Contactez ${CONTACT.phonePrimary}</a>
-      <button class="btn primary" data-details data-id="${product.id}">Voir détails</button>
+      <a class="btn whatsapp-btn" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=224666958301&text=Lien%C2%A0%3A%0Ahttps%3A%2F%2Ffb.me%2F3ASBAsGrl%0A%0ABonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&source_url=https%3A%2F%2Ffb.me%2F3ASBAsGrl&icebreaker=Bonjour%C2%A0%21+Puis-je+en+savoir+plus+%C3%A0+ce+sujet%C2%A0%3F&app=facebook&entry_point=post_cta&jid=224666958301%40s.whatsapp.net&lid=48262581096511%40lid&show_ad_attribution=1&source=FB_Post&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NTk3NTYyOTksInBob25lIjoiMjI0NjY2OTU4MzAxIiwidGV4dCI6IkxpZW5cdTAwYTA6XG5odHRwczpcL1wvZmIubWVcLzNBU0JBc0dybFxuXG5Cb25qb3VyXHUwMGEwISBQdWlzLWplIGVuIHNhdm9pciBwbHVzIFx1MDBlMCBjZSBzdWpldFx1MDBhMD8iLCJzb3VyY2VfdXJsIjoiaHR0cHM6XC9cL2ZiLm1lXC8zQVNCQXNHcmwiLCJpY2VicmVha2VyIjoiQm9uam91clx1MDBhMCEgUHVpcy1qZSBlbiBzYXZvaXIgcGx1cyBcdTAwZTAgY2Ugc3VqZXRcdTAwYTA_IiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBvc3RfY3RhIiwiamlkIjoiMjI0NjY2OTU4MzAxXHUwMDQwcy53aGF0c2FwcC5uZXQiLCJsaWQiOiI0ODI2MjU4MTA5NjUxMVx1MDA0MGxpZCIsInNob3dfYWRfYXR0cmlidXRpb24iOjEsInNvdXJjZSI6IkZCX1Bvc3QiLCJzb3VyY2VfaWQiOiIxMjIwOTU0NDc3NjAyNTc3NjkiLCJjb250ZXh0IjoiQWZkRUZreVJqQWRPMWJvWTdua3pIRDRxVnRiWkVoLU9rNmJrSDZEWlFRQ1A5V3V1SmhGeFJldUg3bkxwSWQ0RTE0YU4xT0hlUW9yOHBLeGR4NUtKak1lVGZUU3VoQi1wLXJnRFIyV1dBX1hHelNwVGlJZ3RYUTFrZDdTSDJsSTR5bWpjUk44NTNEZ1FwQnhrUGRkMmNiYmFLU0x5aUcwbldFMnhEWWljVTlNVFJsSXh1TWdaTDJPMGx6NlJURnVFTGh3d1JVcE92STh4MkVXMmQxS3h6T1FLdnJFaDJqYjZOZ2RaT004dE90TXo4NUxDcGw5dEc2SERCaFM5NndzcWphZktVNmNVckt5VFdZNERaSzZ1ajFkNmw0T2ZPdWtldktCSzcyMzZOMVFGbzVfLUNIRW9FUmhXOGVENms3VHJaMVlmVkhLYXhydFA2SUhYellVb3B5TzdqMkxsdFljMUd4Y1dSVGJ0alQwWlBkMmUxQ1QyIn0.fNknohtQNmyKxCytPzcWPFgmaX-SlVU9lTegdr20iNZ0cCTOT9UCqZLQusxZKl65QEhnwkqVAKnREcqDMxNTTw">
+        WhatsApp
+      </a>
+      <a class="btn messenger-btn" target="_blank" rel="noreferrer" href="https://m.me/sita.camara.90">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 3.584 1.948 6.73 4.86 8.47L3.5 24l3.97-1.24C8.5 23.5 10.2 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.568 16.5c-.2.6-1.2 1.1-1.8 1.2-.6.1-1.3.2-2.1.2-1.1 0-2.2-.3-3.1-.8-1.4-.7-2.5-1.8-3.2-3.2-.7-1.4-.7-2.9 0-4.3.7-1.4 1.8-2.5 3.2-3.2 1.4-.7 2.9-.7 4.3 0 1.4.7 2.5 1.8 3.2 3.2.7 1.4.7 2.9 0 4.3-.2.4-.5.7-.8 1z" fill="currentColor"/>
+        </svg>
+        <span>Messenger</span>
+      </a>
+      <button class="btn primary" data-details data-id="${product.id}">Détails</button>
     </div>
   `;
   return card;
