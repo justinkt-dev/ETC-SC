@@ -17,9 +17,11 @@ body{min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:
 .mobile-menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
 .mobile-menu-toggle.active span:nth-child(2){opacity:0}
 .mobile-menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
-.btn{background:#e5e7eb;border:none;padding:10px 14px;border-radius:8px;color:#111;cursor:pointer;transition:.2s}
-.btn:hover{filter:brightness(.95)}
+.btn{background:#e5e7eb;border:none;padding:10px 14px;border-radius:8px;color:#111;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease, filter .2s ease}
+.btn:hover{filter:brightness(.97);transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.12)}
+.btn:active{transform:translateY(-1px)}
 .btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.05)}
 .btn.small{padding:8px 12px;font-size:.9rem}
 .btn.large{padding:12px 18px;font-size:1.05rem}
 .btn.outline{background:transparent;border:1px solid var(--ring)}
@@ -75,6 +77,10 @@ html.dark .hero-info .info-line{background:#0f172a;border-color:#1f2937}
 .social .social-btn{display:block;margin:8px 0;padding:10px 12px;border-radius:8px;text-decoration:none;color:#fff;text-align:center}
 .social .facebook{background:#1877f2}
 .social .whatsapp{background: darkgreen}
+
+/* Hover elevate for social buttons */
+.social .social-btn{transition:transform .2s ease, box-shadow .2s ease, filter .2s ease}
+.social .social-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.16);filter:brightness(1.03)}
 
 .grid{background:var(--panel);border:1px solid var(--ring);border-radius:12px;padding:20px;width:100%}
 .grid-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:12px}
@@ -180,6 +186,14 @@ html.dark .address-link{background:#0b1220;border-color:#1f2937}
 /* Alias to cover existing markup typo */
 .adress-link{color:#fff;background:#111827;border:1px solid var(--ring);padding:10px 12px;border-radius:10px;text-decoration:none;display:inline-block}
 html.dark .adress-link{background:#0b1220;border-color:#1f2937}
+
+/* Hover states for address links */
+.address-link,.adress-link{transition:transform .2s ease, box-shadow .2s ease, filter .2s ease}
+.address-link:hover,.adress-link:hover{filter:brightness(1.03);box-shadow:0 8px 18px rgba(0,0,0,.12)}
+
+/* Map image hover (wrapped in anchor) */
+.map-img{border-radius:12px;display:block;max-width:100%;height:auto;transition:transform .25s ease, box-shadow .25s ease}
+.contact-right a:hover .map-img{transform:scale(1.02);box-shadow:0 10px 24px rgba(0,0,0,.18)}
 
 /* Theme system */
 html,body{transition:background-color .25s ease,color .25s ease}
