@@ -181,7 +181,7 @@ html.dark .btn.primary, html.dark a.btn.primary{color:#fff}
 
 /* Contact section two-column layout: left actions, right address */
 .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
-.contact-left{display:flex;flex-direction:column;gap:12px}
+.contact-left{display:flex;flex-direction:column;gap:20px}
 .contact-right{background:var(--panel);border:1px solid var(--ring);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;align-self:start}
 .contact-right h3{margin:0 0 6px 0}
 .address-link{color:#fff;background:#111827;border:1px solid var(--ring);padding:10px 12px;border-radius:10px;text-decoration:none;display:inline-block}
