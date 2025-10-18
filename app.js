@@ -30,22 +30,22 @@ function buildWhatsAppUrl(phone, message) {
 // Central email configuration for outbound requests/notifications
 const products = [
   // { id: 'p1', name: 'Ordinateur Portable Pro 14"', image: 'assets/ordi-portable.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 Go', Stockage: '512 Go SSD' } },
-  { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', bestSeller: true, category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
-  { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p1', name: 'HP Omen 13e génération i9, 16 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i9', RAM: '16 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p2', name: 'HP Omen 13e génération i9, 32 GB RAM, 1 TB SSD, 8 GB C.G', image: 'assets/omen-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i9', RAM: '32 GB', Graphics: '8 GB C.G', Stockage: '1 TB SSD' } },
   
   { id: 'p10', name: 'HP Victus 13e génération i7, 16 GB RAM, 512 GB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Graphics: '6 GB C.G', Stockage: '512 GB SSD' } },
-  { id: 'p11', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p11', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
 
-  { id: 'p20', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 8 GB RAM, 512 GB SSD', bestSeller: true, image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
-  { id: 'p21', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i3', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p20', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i3', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p21', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i3', RAM: '16 GB', Stockage: '512 GB SSD' } },
   { id: 'p22', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
-  { id: 'p23', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
-  { id: 'p24', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i7, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p23', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p24', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i7, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i7', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
   { id: 'p25', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i7, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Stockage: '512 GB SSD' } },
 
-  { id: 'p30', name: 'HP Envy', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p31', name: 'HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p32', name: 'HP Core Ultra 7, 16 GB RAM, 1 TB SSD', image: 'assets/hpcore-ultra7.webp', category: 'laptop', isNew: true, specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p30', name: 'HP Envy Intel Core i5, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p31', name: 'HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p32', name: 'HP Core Ultra 7, 16 GB RAM, 1 TB SSD', image: 'assets/hpcore-ultra7.webp', category: 'laptop', specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p33', name: 'Chargeurs HP', image: 'assets/hp-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
   { id: 'p34', name: 'Chargeurs Dell', image: 'assets/dell-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
   { id: 'p35', name: 'Chargeurs Lenovo', image: 'assets/lenovo-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
@@ -53,19 +53,19 @@ const products = [
 
   { id: 'p40', name: 'HP Omni Book 5, i5, 8 GB RAM, 512 GB SSD', image: 'assets/omni-book5.webp', bestSeller: true, category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
   
-  { id: 'p42', name: 'Onduleur', image: 'assets/onduleur.webp', category: 'accessory', isNew: true, specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
-  { id: 'p43', name: 'Climatiseurs 9000 BTU, 12000 BTU', image: 'assets/climatiseur.webp', category: 'accessory', isNew: true, specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
+  { id: 'p42', name: 'Onduleur 1200VA, 1500VA, 2250VA, 3000VA', image: 'assets/onduleur.webp', category: 'accessory', specs: { Type: 'Onduleur', Puissance: '1200VA | 1500VA | 2250VA | 3000VA' } },
+  { id: 'p43', name: 'Climatiseurs 9000 BTU, 12000 BTU', image: 'assets/climatiseur.webp', category: 'accessory', specs: { Type: 'Climatiseurs', Puissance: '9000 BTU | 12000 BTU' } },
   { id: 'p44', name: 'Fourniture de bureau', image: 'assets/station.webp', category: 'papeteries', specs: { Type: 'Papeteries' } },
   { id: 'p45', name: 'Fourniture de bureau', image: 'assets/station2.webp', category: 'papeteries', specs: { Type: 'Papeteries' } },
   { id: 'p46', name: 'Fourniture de bureau', image: 'assets/station3.webp', category: 'papeteries', specs: { Type: 'Papeteries' } },
   { id: 'p47', name: 'Enveloppes', image: 'assets/station4.webp', category: 'papeteries', specs: { Type: 'Papeteries' } },
 
   
-  { id: 'p50', name: 'Desktop All in one 12e et 13e génération i5, 8 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p51', name: 'Desktop All in one 12e et 13e génération i5, 16 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p52', name: 'Desktop All in one 12e et 13e génération i7, 8 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p53', name: 'Desktop All in one 12e et 13e génération i7, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p55', name: 'Desktop HP 290 i5, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB SSD' } },
+  { id: 'p50', name: 'Desktop All in One 12e et 13e génération i5, 8 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p51', name: 'Desktop All in One 12e et 13e génération i5, 16 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p52', name: 'Desktop All in One 12e et 13e génération i7, 8 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p53', name: 'Desktop All in One 12e et 13e génération i7, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p55', name: 'Desktop HP 290 i5, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB SSD' } },
   { id: 'p56', name: 'Desktop HP 290 i7, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
   
   { id: 'p60', name: 'Chargeurs HP Type-C 65W', image: 'assets/hp-charger.webp', bestSeller: true, category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
@@ -78,27 +78,27 @@ const products = [
   { id: 'p68', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'cables', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
 
 
-  { id: 'p70', name: 'Encre Epson', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
-  { id: 'p71', name: 'Encre HP Toner', image: 'assets/hptoner-ink.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
+  { id: 'p70', name: 'Encre Epson 101, 103, 667', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
+  { id: 'p71', name: 'Encre HP Toner 107, 117, 207, 216, 307, 410, 415', image: 'assets/hptoner-ink.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
   
   { id: 'p72', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre Canon', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
-  { id: 'p73', name: 'Encre Canon CEXV33', image: 'assets/canon-CEXV33.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'Canon CEXV33' } },
-  { id: 'p72', name: 'Encre Canon CEXV42', image: 'assets/canon-CEXV42.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'Canon CEXV42' } },
-  { id: 'p73', name: 'Encre Canon CEXV54', image: 'assets/canon-CEXV54.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'Canon CEXV54' } },
-  { id: 'p74', name: 'Encre Canon CEXV60', image: 'assets/canon-CEXV60.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'Canon CEXV60' } },
+  { id: 'p73', name: 'Encre Canon CEXV33', image: 'assets/canon-CEXV33.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV33' } },
+  { id: 'p72', name: 'Encre Canon CEXV42', image: 'assets/canon-CEXV42.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV42' } },
+  { id: 'p73', name: 'Encre Canon CEXV54', image: 'assets/canon-CEXV54.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV54' } },
+  { id: 'p74', name: 'Encre Canon CEXV60', image: 'assets/canon-CEXV60.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV60' } },
 
-  { id: 'p79', name: 'Encre RICOH', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
+  { id: 'p79', name: 'Encre RICOH MP2501SP', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
   
   
-  { id: 'p80', name: 'Souris Pour HP', image: 'assets/hp-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
-  { id: 'p81', name: 'Souris Pour Logitech', image: 'assets/log-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
-  { id: 'p82', name: 'Souris Pour Dell', image: 'assets/dell-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP | Logitech | Dell' } },
+  { id: 'p80', name: 'Souris Pour HP', image: 'assets/hp-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP' } },
+  { id: 'p81', name: 'Souris Pour Logitech', image: 'assets/log-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'Logitech' } },
+  { id: 'p82', name: 'Souris Pour Dell', image: 'assets/dell-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'Dell' } },
 
   
-  { id: 'p90', name: "Verrous d'ordinateur", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
-  { id: 'p91', name: 'Casque stéréo', image: 'assets/stereo-hs.webp', category: 'accessory', isNew: true, specs: { Type: 'Casque', Categories: 'Stereo' } },
+  { id: 'p90', name: "Verrous d'ordinateur Avec clé | Avec code", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
+  { id: 'p91', name: 'Casque stéréo', image: 'assets/stereo-hs.webp', category: 'accessory', specs: { Type: 'Casque', Categories: 'Stereo' } },
   { id: 'p92', name: 'Adaptateur Type C Rj45', image: 'assets/adapt.webp', category: 'cables', specs: { Type: 'Adaptateur', Categories: 'Type C Rj45' } },
-  { id: 'p92', name: 'Switch', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
+  { id: 'p92', name: 'Switch 6 Ports | 8 Ports | 10 Ports', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
   { id: 'p94', name: 'Souffleur electronique', image: 'assets/soufler.webp', category: 'accessory', isNew: true, specs: { Type: 'Accessoires', Categories: 'Souffleur electronique' } },
   { id: 'p95', name: 'Boîtier disque dur Externe HHD', image: 'assets/box-hdd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'HHD' } },
   { id: 'p96', name: 'Boîtier disque dur Externe SDD', image: 'assets/box-ssd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'SSD' } },
@@ -132,7 +132,7 @@ const products = [
   { id: 'p123', name: 'Agrafes Standard', image: 'assets/staples.webp', category: 'papeteries', specs: { Type: 'Agrafes', Taille: '26/6', Quantité: '1000 pièces' } },
   { id: 'p124', name: 'Perforateur 2 trous', image: 'assets/perform-2trous.webp', category: 'papeteries', specs: { Type: 'Perforateur', Trous: '2', Capacité: '20 feuilles' } },
   { id: 'p125', name: 'Accessoires Papeterie', image: 'assets/accessoires.webp', category: 'papeteries', specs: { Type: 'Perforateur', Trous: '3', Capacité: '20 feuilles' } },
-  { id: 'p126', name: 'Classeur A4', image: 'assets/binder-A4.webp', category: 'papeteries', isNew: true, specs: { Type: 'Classeur', Format: 'A4', Anneaux: '2 ou 4', Couleur: 'Multicolore' } },
+  { id: 'p126', name: 'Classeur A4', image: 'assets/binder-A4.webp', category: 'papeteries', specs: { Type: 'Classeur', Format: 'A4', Anneaux: '2 ou 4', Couleur: 'Multicolore' } },
   { id: 'p127', name: 'Chemises cartonnées', image: 'assets/folders.webp', category: 'papeteries', isNew: true, specs: { Type: 'Chemises', Matériau: 'Carton', Format: 'A4', Quantité: '10 pièces' } },
   // { id: 'p128', name: 'Papier photo 10x15', image: 'assets/photo-paper.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier photo', Format: '10x15 cm', Finition: 'Brillant', Quantité: '100 feuilles' } },
   // { id: 'p129', name: 'Papier calque A4', image: 'assets/tracing-paper.webp', category: 'papeteries', isNew: true, specs: { Type: 'Papier calque', Format: 'A4', Transparence: 'Haute', Quantité: '50 feuilles' } },
