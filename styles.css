@@ -177,7 +177,7 @@ html.dark .btn.primary, html.dark a.btn.primary{color:#fff}
 .legal{margin-top:4px;text-align:center;font-size:.9rem;line-height:1.4;color:#9ca3af}
 
 /* Contact section two-column layout: left actions, right address */
-.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1200px;margin:0 auto}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
 .contact-left{display:flex;flex-direction:column;gap:12px}
 .contact-right{background:var(--panel);border:1px solid var(--ring);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;align-self:start}
 .contact-right h3{margin:0 0 6px 0}
@@ -192,7 +192,7 @@ html.dark .adress-link{background:#0b1220;border-color:#1f2937}
 .address-link:hover,.adress-link:hover{filter:brightness(1.03);box-shadow:0 8px 18px rgba(0,0,0,.12)}
 
 /* Map image hover (wrapped in anchor) */
-.map-img{border-radius:12px;display:block;max-width:100%;height:auto;transition:transform .25s ease, box-shadow .25s ease}
+.map-img{border-radius:12px;display:block;max-width:100%;height:auto;transition:transform .25s ease, box-shadow .25s ease;margin:8px auto}
 .contact-right a:hover .map-img{transform:scale(1.02);box-shadow:0 10px 24px rgba(0,0,0,.18)}
 
 /* Theme system */
