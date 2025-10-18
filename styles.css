@@ -87,9 +87,8 @@ html.dark .hero-info .info-line{background:#0f172a;border-color:#1f2937}
 
 .grid{background:var(--panel);border:1px solid var(--ring);border-radius:12px;padding:20px;width:100%}
 .categories .grid{padding:20px 32px}
-.grid-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:nowrap;gap:12px}
-.grid-title h2{margin:0;flex-shrink:0}
-.pills{display:flex;gap:8px;flex-wrap:nowrap;justify-content:flex-start;align-items:center;width:auto;flex:1;overflow-x:auto}
+.grid-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:12px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-start;align-items:center;width:100%}
 @media (max-width: 900px){
   .pills{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;scroll-behavior:smooth;scroll-snap-type:x mandatory}
   .pills::-webkit-scrollbar{height:8px}
