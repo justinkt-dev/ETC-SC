@@ -156,9 +156,6 @@ function createProductCard(product) {
         <span>WhatsApp</span>
       </a>
       <a class="btn messenger-btn" target="_blank" rel="noreferrer" href="https://m.me/sita.camara.90">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M12 0C5.373 0 0 5.373 0 12c0 3.584 1.948 6.73 4.86 8.47L3.5 24l3.97-1.24C8.5 23.5 10.2 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.568 16.5c-.2.6-1.2 1.1-1.8 1.2-.6.1-1.3.2-2.1.2-1.1 0-2.2-.3-3.1-.8-1.4-.7-2.5-1.8-3.2-3.2-.7-1.4-.7-2.9 0-4.3.7-1.4 1.8-2.5 3.2-3.2 1.4-.7 2.9-.7 4.3 0 1.4.7 2.5 1.8 3.2 3.2.7 1.4.7 2.9 0 4.3-.2.4-.5.7-.8 1z" fill="currentColor"/>
-        </svg>
         <span>Messenger</span>
       </a>
       <button class="btn primary" data-details data-id="${product.id}">Détails</button>
