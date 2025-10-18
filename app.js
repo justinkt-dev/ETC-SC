@@ -139,6 +139,7 @@ const products = [
 
 ];
 
+
 function createProductCard(product) {
   const card = document.createElement('article');
   card.className = 'card';
@@ -192,6 +193,8 @@ function renderProducts(filter = 'all') {
     .forEach(p => grid.appendChild(createProductCard(p)));
   wireDetails();
 }
+
+
 function activateFilters() {
   const pills = document.querySelectorAll('.pill');
   pills.forEach(p => p.addEventListener('click', () => {
@@ -223,6 +226,8 @@ function activateFilters() {
     });
   }
 }
+
+
 function renderTopSellers() {
   const ul = document.getElementById('topSellers');
   if (!ul)
