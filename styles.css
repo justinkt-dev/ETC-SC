@@ -158,14 +158,10 @@ html.dark .btn.primary, html.dark a.btn.primary{color:#fff}
 .messenger-btn{background:#1877f2 !important;color:#fff !important;text-decoration:underline;display:flex;align-items:center;justify-content:center;gap:8px}
 /* WhatsApp buttons green site-wide */
 .whatsapp-btn{background:darkgreen !important;color:#fff !important;text-decoration:underline}
+/* Center WhatsApp label inside product card button */
+.card .actions .whatsapp-btn{display:flex;align-items:center;justify-content:center;text-align:center}
 
-.contact-form{background:var(--panel);border:1px solid var(--ring);border-radius:12px;padding:16px}
-.contact-form .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
-.contact-form label{display:grid;gap:6px;font-weight:600}
-.contact-form input,.contact-form textarea{padding:10px 12px;border-radius:8px;border:1px solid var(--ring);font:inherit}
-.contact-form .actions{display:flex;gap:10px;margin-top:10px}
-.contact-form .actions .btn{font-weight:700}
-.contact-form .actions button[type="submit"]{font-size:1.05rem}
+
 .flash{margin-top:8px;color:#065f46}
 
 .footer{background:#1f2937;color:#cbd5e1;padding:12px 0;width:100%;margin-top:auto}
