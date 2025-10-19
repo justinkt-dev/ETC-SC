@@ -65,8 +65,8 @@ const products = [
   
   { id: 'p50', name: 'Desktop All in One 12e et 13e génération i5, 8 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p51', name: 'Desktop All in One 12e et 13e génération i5, 16 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p52', name: 'Desktop All in One 12e et 13e génération i7, 8 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p53', name: 'Desktop All in One 12e et 13e génération i7, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p52', name: 'Desktop All in One 12e et 13e génération i7, 8 GB RAM, 512 GB SSD', image: 'assets/dellAIO.webp', category: 'laptop', specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p53', name: 'Desktop All in One 12e et 13e génération i7, 16 GB RAM, 1TB SSD', image: 'assets/dellAIO.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5 | i7', RAM: '8 GB | 16 GB', Stockage: '512 GB | 1 TB SSD' } },
   { id: 'p55', name: 'Desktop HP 290 i5, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '8 GB', Stockage: '512 GB SSD' } },
   { id: 'p56', name: 'Desktop HP 290 i7, 8 GB RAM, 512 GB SSD', image: 'assets/hp290.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '8 GB', Stockage: '512 GB SSD' } },
   
@@ -80,10 +80,10 @@ const products = [
   { id: 'p68', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'cables', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
 
 
-  { id: 'p70', name: 'Encre Epson 101 103 664', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
+  { id: 'p70', name: 'Encre Epson 101, 103, 664', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
   { id: 'p71', name: 'Encre HP Toner 107A, 117A', image: 'assets/hptoner-107a.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
   { id: 'p72', name: 'Encre HP Toner 203A, 207A, 307A', image: 'assets/hptoner-203a.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
-  { id: 'p73', name: 'Encre HP Toner 410A, 415A, 416A ', image: 'assets/hptoner-410a.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
+  { id: 'p73', name: 'Encre HP Toner 410A, 415A', image: 'assets/hptoner-410a.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
 
   { id: 'p74', name: 'Encre Canon CEXV33', image: 'assets/canon-CEXV33.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV33' } },
   { id: 'p75', name: 'Encre Canon CEXV42', image: 'assets/canon-CEXV42.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV42' } },
