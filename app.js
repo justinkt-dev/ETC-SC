@@ -419,9 +419,15 @@ function wireThemeToggle() {
   const btn = document.getElementById('themeToggle');
   if (!btn)
     return;
+  // Default to light on mobile; respect saved theme otherwise
   const saved = localStorage.getItem('theme');
-  if (saved === 'dark')
+  const isMobile = window.matchMedia && window.matchMedia('(max-width: 560px)').matches;
+  if (saved === 'dark') {
     document.documentElement.classList.add('dark');
+  } else if (isMobile) {
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }
   btn.addEventListener('click', () => {
     document.documentElement.classList.toggle('dark');
     const isDark = document.documentElement.classList.contains('dark');
