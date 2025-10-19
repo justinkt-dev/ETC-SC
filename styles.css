@@ -25,6 +25,7 @@ body{min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:
 .btn.small{padding:8px 12px;font-size:.9rem}
 .btn.large{padding:12px 18px;font-size:1.05rem}
 .btn.outline{background:transparent;border:1px solid var(--ring)}
+.mobile-br{display:none}
 .navbar{background:#d11f1f;position:fixed;top:60px;z-index:999;width:100%}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:8px 0;flex-wrap:nowrap;min-height:50px}
 .menu{list-style:none;display:flex;gap:18px;margin:0;padding:0;flex-shrink:0}
@@ -276,11 +277,11 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .navbar{position:fixed;top:60px;left:0;right:0;transform:none;transition:none;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.1)}
   .navbar.active{transform:none;box-shadow:0 4px 20px rgba(0,0,0,.1)}
   .nav-inner{flex-direction:row;gap:12px;padding:10px 0;align-items:center}
-  .menu{flex-direction:row;gap:12px;width:auto;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .menu a{padding:8px 10px;display:inline-block;text-align:left;border-radius:6px;background:transparent;transition:all 0.3s ease;transform:none;opacity:1}
+  .menu{flex-direction:row;gap:8px;width:auto;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .menu a{padding:6px 8px;display:inline-block;text-align:left;border-radius:6px;background:transparent;transition:all 0.3s ease;transform:none;opacity:1}
   .menu a:hover{background:rgba(255,255,255,0.15)}
   .search{width:auto;flex-direction:row;gap:8px}
-  .search input{min-width:130px;width:auto}
+  .search input{min-width:120px;width:auto}
   .search button{width:auto}
   .contact-layout{grid-template-columns:1fr;gap:12px}
   .contact-btn{padding:14px 16px;font-size:0.95rem}
@@ -318,9 +319,9 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .hero-info .info-line{flex-direction:row;text-align:left;gap:10px;padding:12px 14px;font-size:0.9rem;border-radius:12px}
   .hero-info .info-line span{font-size:0.9rem}
   .categories{margin:20px auto}
-  .products{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-  /* Restore vertical grid listing on phones */
-  .products{display:grid;overflow:visible;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  /* One item per row on phones */
+  .products{display:grid;overflow:visible;grid-template-columns:1fr;gap:12px;margin-top:8px}
+  .card{max-width:640px;margin:0 auto;width:100%}
   .card{padding:8px}
   .card img{height:180px}
   .card h4{font-size:1.1rem;margin:12px 0 8px 0;font-weight:600}
@@ -355,14 +356,17 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   #topSellers{grid-template-columns:1fr}
   #topSellers li{flex-direction:row;text-align:left;gap:12px;border-radius:10px}
   #topSellers img{width:48px;height:48px;border-radius:8px}
-  .pills{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;gap:8px;scroll-snap-type:x mandatory}
-  .pill{font-size:0.85rem;padding:8px 12px;flex-shrink:0;border-radius:20px;transition:all 0.2s ease;scroll-snap-align:start}
+  /* Show all filters (wrap, no horizontal scroll) */
+  .pills{display:flex;flex-wrap:wrap;justify-content:flex-start;overflow:visible;gap:8px;padding-bottom:0}
+  .pill{font-size:0.85rem;padding:8px 12px;border-radius:20px;transition:all 0.2s ease}
   .pill:hover{transform:scale(1.05)}
   .topbar .container{padding:8px 10px}
   .topbar .brand-name{font-size:0.9rem}
   .navbar{top:60px}
   /* Add breathing space between navbar and hero */
   main{padding-top:120px}
+  /* Show brand line break on phones */
+  .mobile-br{display:inline}
 }
 
 @media (max-width: 480px){
@@ -372,9 +376,12 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .brand .logo{width:24px;height:24px}
   .hero-text h1{font-size:22px}
   .hero-text p{font-size:0.95rem}
-  .products{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
-  /* Keep vertical list on very small phones */
-  .products{display:grid;overflow:visible;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+  /* Tighten nav spacing for very small phones */
+  .menu{gap:6px}
+  .menu a{padding:4px 6px}
+  /* One item per row on very small phones */
+  .products{display:grid;overflow:visible;grid-template-columns:1fr;gap:10px}
+  .card{max-width:600px;margin:0 auto;width:100%}
   .card{padding:6px}
   .card img{height:160px}
   .grid{padding:12px}
@@ -383,7 +390,7 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .pill{font-size:0.85rem;padding:6px 10px}
   .contact-btn{padding:16px 18px;font-size:0.95rem}
   .hero-info .info-line{padding:10px 12px;font-size:0.85rem}
-  .search input{min-width:120px}
+  .search input{min-width:100px}
   /* Maintain extra spacing under fixed headers */
   main{padding-top:120px}
 }
