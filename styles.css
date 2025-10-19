@@ -237,12 +237,15 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
 
 /* Tablets */
 @media (max-width: 1024px){
-  .hero-inner{grid-template-columns:1fr;gap:20px;text-align:center}
+  /* Keep desktop-like two-column hero on tablets */
+  .hero-inner{grid-template-columns:1.1fr .9fr;gap:24px;text-align:left}
   .hero-text h1{font-size:28px}
   .card img{height:240px}
   .products{gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
   .categories{grid-template-columns:1fr;gap:18px}
   .services-list li{flex:1 1 calc(50% - 5px);min-width:120px}
+  /* Desktop-like filters on tablets */
+  .pills{flex-wrap:wrap;overflow:visible}
   /* Ensure navbar/hero spacing is consistent on tablets */
   .navbar{top:60px}
   main{padding-top:110px}
