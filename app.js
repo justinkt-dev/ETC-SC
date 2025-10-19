@@ -95,9 +95,9 @@ const products = [
   { id: 'p80', name: 'Souris HP', image: 'assets/hp-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP' } },
   { id: 'p81', name: 'Souris Logitech M170', image: 'assets/log-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'Logitech' } },
   { id: 'p82', name: 'Souris Dell', image: 'assets/dell-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'Dell' } },
-  { id: 'p83', name: 'Switch 4 Ports', image: 'assets/switch-simple.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
-  { id: 'p84', name: 'Switch 6 Ports POA', image: 'assets/switch-poa.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
-  { id: 'p85', name: 'Switch 8 Ports, 16 Ports Gigabits', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '8 Ports | 16 Ports Gigabits' } },
+  { id: 'p83', name: 'Switch 4 Ports', image: 'assets/switch-simple.webp', category: 'switch', specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
+  { id: 'p84', name: 'Switch 6 Ports POA', image: 'assets/switch-poa.webp', category: 'switch', specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
+  { id: 'p85', name: 'Switch 8 Ports, 16 Ports Gigabits', image: 'assets/switch.webp', category: 'switch', specs: { Type: 'Switch', Categories: '8 Ports | 16 Ports Gigabits' } },
 
   
   { id: 'p90', name: "Verrous d'ordinateur Avec clé | Avec code", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
