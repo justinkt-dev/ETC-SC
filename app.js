@@ -39,16 +39,15 @@ const products = [
   { id: 'p13', name: 'Imprimante HP M3303FDW', image: 'assets/hp-m3303fdw.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet', Colours: 'Noir & Blanc | Colorié' } },
 
 
-  { id: 'p20', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i3', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
-  { id: 'p21', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i3', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p20', name: 'Laptop HP 12e et 13e génération Note-Book i3, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i3', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p21', name: 'Laptop HP 12e et 13e génération Note-Book i3, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i3', RAM: '16 GB', Stockage: '512 GB SSD' } },
   { id: 'p22', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i5', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
   { id: 'p23', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i5, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
-  { id: 'p24', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i7, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i7', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
-  { id: 'p25', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i7, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p24', name: 'Laptop HP 12e et 13e génération Note-Book i7, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Stockage: '512 GB SSD' } },
 
-  { id: 'p30', name: 'HP Envy Intel Core i5, 16 GB RAM, 512 GB / 1 TB SSD', image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p31', name: 'HP Envy Ultra', image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
-  { id: 'p32', name: 'HP Core Ultra 7, 16 GB RAM, 1 TB SSD', image: 'assets/hpcore-ultra7.webp', category: 'laptop', specs: { CPU: 'Ultra 5 | Ultra 7', RAM: '16 GB', Stockage: '512 GB | 1 TB SSD' } },
+  { id: 'p30', name: 'HP Envy Intel Core i5, 16 GB RAM, 512 GB SSD', image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'Intel Core i5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p31', name: 'HP Envy Ultra 5, 16 GB RAM, 512 GB SSD', image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'Ultra 5', RAM: '16 GB', Stockage: '512 GB SSD' } },
+  { id: 'p32', name: 'HP Envy Ultra 7, 16 GB RAM, 512 GB SSD', image: 'assets/hp-ultra-thin.webp', category: 'laptop', specs: { CPU: 'Ultra 7', RAM: '16 GB', Stockage: '512 GB SSD' } },
   { id: 'p33', name: 'Chargeurs HP', image: 'assets/hp-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
   { id: 'p34', name: 'Chargeurs Dell', image: 'assets/dell-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
   { id: 'p35', name: 'Chargeurs Lenovo', image: 'assets/lenovo-charger2.webp', category: 'chargers', specs: { Type: 'Chargeurs', Cagetories: 'HP' } },
@@ -81,39 +80,39 @@ const products = [
   { id: 'p68', name: 'Câbles USB, Rj45,HDMI-HDMI, HDMI- DP', image: 'assets/cables.webp', category: 'cables', isNew: true, specs: { Types: 'Câbles', Types: 'USB | Rj45 | HDMI-HDMI | HDMI-VGA | HDMI- DP' } },
 
 
-  { id: 'p70', name: 'Encre Epson 101, 103, 667', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
-  { id: 'p71', name: 'Encre HP Toner 107, 117, 207, 216, 307, 410, 415', image: 'assets/hptoner-ink.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
-  
-  { id: 'p72', name: 'Encre Canon', image: 'assets/canon-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre Canon', Models: 'CEXV33 | CEXV42 | CEXV54 | CEXV60' } },
-  { id: 'p73', name: 'Encre Canon CEXV33', image: 'assets/canon-CEXV33.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV33' } },
-  { id: 'p72', name: 'Encre Canon CEXV42', image: 'assets/canon-CEXV42.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV42' } },
-  { id: 'p73', name: 'Encre Canon CEXV54', image: 'assets/canon-CEXV54.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV54' } },
-  { id: 'p74', name: 'Encre Canon CEXV60', image: 'assets/canon-CEXV60.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV60' } },
+  { id: 'p70', name: 'Encre Epson 101 103 664', image: 'assets/epson-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: '101 |103 | 667' } },
+  { id: 'p71', name: 'Encre HP Toner 107A, 117A', image: 'assets/hptoner-107a.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
+  { id: 'p72', name: 'Encre HP Toner 203A, 207A, 307A', image: 'assets/hptoner-203a.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
+  { id: 'p73', name: 'Encre HP Toner 410A, 415A, 416A ', image: 'assets/hptoner-410a.webp', category: 'ink', bestSeller: true, specs: { Type: 'Encre', Models: '107 | 117 | 207 | 216 | 307 | 410 | 415' } },
+
+  { id: 'p74', name: 'Encre Canon CEXV33', image: 'assets/canon-CEXV33.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV33' } },
+  { id: 'p75', name: 'Encre Canon CEXV42', image: 'assets/canon-CEXV42.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV42' } },
+  { id: 'p76', name: 'Encre Canon CEXV54', image: 'assets/canon-CEXV54.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV54' } },
+  { id: 'p77', name: 'Encre Canon CEXV60', image: 'assets/canon-CEXV60.webp', category: 'ink', specs: { Type: 'Encre', Models: 'Canon CEXV60' } },
 
   { id: 'p79', name: 'Encre RICOH MP2501SP', image: 'assets/ricoh-ink.webp', category: 'ink', isNew: true, specs: { Type: 'Encre', Models: 'MP2501SP' } },
   
-  
-  { id: 'p80', name: 'Souris Pour HP', image: 'assets/hp-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP' } },
-  { id: 'p81', name: 'Souris Pour Logitech', image: 'assets/log-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'Logitech' } },
-  { id: 'p82', name: 'Souris Pour Dell', image: 'assets/dell-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'Dell' } },
+  { id: 'p80', name: 'Souris HP', image: 'assets/hp-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'HP' } },
+  { id: 'p81', name: 'Souris Logitech M170', image: 'assets/log-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'Logitech' } },
+  { id: 'p82', name: 'Souris Dell', image: 'assets/dell-mouse.webp', category: 'accessory', specs: { Type: 'Souris', Categories: 'Dell' } },
+  { id: 'p83', name: 'Switch 4 Ports', image: 'assets/switch-simple.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
+  { id: 'p84', name: 'Switch 6 Ports POA', image: 'assets/switch-poa.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
+  { id: 'p85', name: 'Switch 8 Ports, 16 Ports Gigabits', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '8 Ports | 16 Ports Gigabits' } },
 
   
   { id: 'p90', name: "Verrous d'ordinateur Avec clé | Avec code", image: 'assets/comp-lock.webp', category: 'accessory', isNew: true, specs: { Type: 'Verrous', Categories: 'Avec clé | Avec code' } },
   { id: 'p91', name: 'Casque stéréo', image: 'assets/stereo-hs.webp', category: 'accessory', specs: { Type: 'Casque', Categories: 'Stereo' } },
   { id: 'p92', name: 'Adaptateur Type C Rj45', image: 'assets/adapt.webp', category: 'cables', specs: { Type: 'Adaptateur', Categories: 'Type C Rj45' } },
-  { id: 'p92', name: 'Switch 6 Ports | 8 Ports | 10 Ports', image: 'assets/switch.webp', category: 'switch', isNew: true, specs: { Type: 'Switch', Categories: '6 Ports | 8 Ports | 10 Ports' } },
-  { id: 'p94', name: 'Souffleur electronique', image: 'assets/soufler.webp', category: 'accessory', isNew: true, specs: { Type: 'Accessoires', Categories: 'Souffleur electronique' } },
-  { id: 'p95', name: 'Boîtier disque dur Externe HHD', image: 'assets/box-hdd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'HHD' } },
-  { id: 'p96', name: 'Boîtier disque dur Externe SDD', image: 'assets/box-ssd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'SSD' } },
-  { id: 'p97', name: 'Antivirus Kaspersky', image: 'assets/kaspersky.webp', category: 'accessory', specs: { Type: 'Antivirus', Categories: 'Kaspersky' } },
-  { id: 'p98', name: 'Licence Office 2021', image: 'assets/licence.webp', category: 'accessory', specs: { Type: 'Licence', Categories: 'Office 2021' } },
+  { id: 'p93', name: 'Souffleur electronique', image: 'assets/soufler.webp', category: 'accessory', isNew: true, specs: { Type: 'Accessoires', Categories: 'Souffleur electronique' } },
+  { id: 'p94', name: 'Boîtier disque dur Externe HHD', image: 'assets/box-hdd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'HHD' } },
+  { id: 'p95', name: 'Boîtier disque dur Externe SDD', image: 'assets/box-ssd.webp', category: 'accessory', specs: { Type: 'Boîtier disque dur Externe', Categories: 'SSD' } },
+  { id: 'p96', name: 'Antivirus Kaspersky', image: 'assets/kaspersky.webp', category: 'accessory', specs: { Type: 'Antivirus', Categories: 'Kaspersky' } },
+  { id: 'p97', name: 'Licence Office 2021', image: 'assets/licence.webp', category: 'accessory', specs: { Type: 'Licence', Categories: 'Office 2021' } },
 
 
-  { id: 'p100', name: 'Imprimantes Canon', image: 'assets/canon.webp', category: 'printer', bestSeller: true, specs: { Type: 'Imprimantes', C: 'Epson L3252 | Laser HP M3303 | 107a | 2320' } },
-  { id: 'p102', name: 'Nettoyant pour appareils (Kit)', image: 'assets/cleaner-kit.webp', category: 'cleaner', bestSeller: true, specs: { Contenu: 'Spray + chiffon', Volume: '200 ml' } },
-  { id: 'p103', name: 'Imprimante Laser L500', image: 'assets/printer-lazer.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet' } },
-  { id: 'p104', name: 'Caméra Bridge Zoom', image: 'assets/cctv_old.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
-  { id: 'p105', name: 'Caméras Dahua technology', image: 'assets/cctv-dahua.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
+  { id: 'p100', name: 'Nettoyant pour appareils (Kit)', image: 'assets/cleaner-kit.webp', category: 'cleaner', bestSeller: true, specs: { Contenu: 'Spray + chiffon', Volume: '200 ml' } },
+  { id: 'p101', name: 'Caméra Bridge Zoom', image: 'assets/cctv_old.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
+  { id: 'p102', name: 'Caméras Dahua technology', image: 'assets/cctv-dahua.webp', category: 'camera', specs: { Capteur: '20 MP', Zoom: '40x' } },
   
   { id: 'p108', name: 'Scanneur Led 300', image: 'assets/scanner-led.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'Led 300' } },
   { id: 'p109', name: 'Scanneur HP2600 F1', image: 'assets/scanner-hp.webp', category: 'printer', specs: { Type: 'Scanneurs', Categories: 'HP 2600 F1' } },
