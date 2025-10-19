@@ -35,6 +35,9 @@ const products = [
   
   { id: 'p10', name: 'HP Victus 13e génération i7, 16 GB RAM, 512 GB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', isNew: true, specs: { CPU: 'Intel Core i7', RAM: '16 GB', Graphics: '6 GB C.G', Stockage: '512 GB SSD' } },
   { id: 'p11', name: 'HP Victus 13e génération i7, 32 GB RAM, 1 TB SSD, 6GB C.G', image: 'assets/victus-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i7', RAM: '32 GB', Graphics: '6 GB C.G', Stockage: '1 TB SSD' } },
+  { id: 'p12', name: 'Imprimante Epson L3252', image: 'assets/epson-l3252.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet', Colours: 'Noir & Blanc | Colorié' } },
+  { id: 'p13', name: 'Imprimante HP M3303FDW', image: 'assets/hp-m3303fdw.webp', category: 'printer', specs: { Vitesse: '35 ppm', Réseau: 'Ethernet', Colours: 'Noir & Blanc | Colorié' } },
+
 
   { id: 'p20', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 8 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i3', RAM: '8 GB | 16 GB', Stockage: '512 GB SSD' } },
   { id: 'p21', name: 'Laptop HP 12e et 13e génération Note-Book & Pro-Book i3, 16 GB RAM, 512 GB SSD', image: 'assets/noteprobook-laptop.webp', category: 'laptop', specs: { CPU: 'Intel Core i3', RAM: '16 GB', Stockage: '512 GB SSD' } },
