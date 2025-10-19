@@ -319,9 +319,8 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .hero-info .info-line span{font-size:0.9rem}
   .categories{margin:20px auto}
   .products{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-  /* Horizontal swipe for product cards */
-  .products{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;padding-bottom:6px}
-  .products .card{flex:0 0 88%;scroll-snap-align:start}
+  /* Restore vertical grid listing on phones */
+  .products{display:grid;overflow:visible;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
   .card{padding:8px}
   .card img{height:180px}
   .card h4{font-size:1.1rem;margin:12px 0 8px 0;font-weight:600}
@@ -374,9 +373,8 @@ html.dark .modal-close{background:#111827;border-color:#1f2937;color:#e5e7eb}
   .hero-text h1{font-size:22px}
   .hero-text p{font-size:0.95rem}
   .products{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
-  /* Keep horizontal swipe on very small phones */
-  .products{display:flex;overflow-x:auto;gap:10px;scroll-snap-type:x mandatory;padding-bottom:6px}
-  .products .card{flex:0 0 90%;scroll-snap-align:start}
+  /* Keep vertical list on very small phones */
+  .products{display:grid;overflow:visible;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
   .card{padding:6px}
   .card img{height:160px}
   .grid{padding:12px}
