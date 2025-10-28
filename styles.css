@@ -203,6 +203,16 @@ html.dark .adress-link{background:#0b1220;border-color:#1f2937}
 .contact-right a:hover .map-img{transform:scale(1.02);box-shadow:0 10px 24px rgba(0,0,0,.18)}
 
 
+/* Floating home button */
+.float-home-btn{position:fixed;right:16px;bottom:20px;height:44px;width:44px;display:grid;place-items:center;background:var(--accent);color:#fff;border-radius:50%;border:1px solid var(--accent);box-shadow:0 6px 18px rgba(0,0,0,.15);text-decoration:none;z-index:1100}
+.float-home-btn:hover{filter:brightness(.95)}
+.float-home-btn:focus{outline:0;box-shadow:0 0 0 4px var(--ring)}
+.float-home-btn svg{height:22px;width:22px;display:block}
+@media (min-width:1025px){
+  .float-home-btn{height:56px;width:56px;right:24px;bottom:24px}
+  .float-home-btn svg{height:26px;width:26px}
+}
+
 /* Theme system */
 html,body{transition:background-color .25s ease,color .25s ease}
 html.dark{--bg:#0b0f13;--panel:#0f172a;--ink:#e5e7eb;--muted:#9ca3af;--ring:#243045;--accent:#3b82f6}
