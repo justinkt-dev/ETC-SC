@@ -212,6 +212,10 @@ html.dark .adress-link{background:#0b1220;border-color:#1f2937}
   .float-home-btn{height:56px;width:56px;right:24px;bottom:24px}
   .float-home-btn svg{height:26px;width:26px}
 }
+@media (max-width:560px){
+  .float-home-btn{right:12px;bottom:18px;height:44px;width:44px}
+  .float-home-btn svg{height:22px;width:22px}
+}
 
 /* Theme system */
 html,body{transition:background-color .25s ease,color .25s ease}
