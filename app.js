@@ -266,6 +266,7 @@ function wireDetails() {
             <img style=\"width:100%;height:340px;object-fit:contain;border-radius:12px;background:transparent;filter:drop-shadow(0 10px 24px rgba(0,0,0,.18))\" src=\"${product.image}\" alt=\"${product.name}\"> 
           </picture>
         </div>
+
         <div>
           <h3 style=\"margin:0 0 8px 0\">${product.name}</h3>
           <div class=\"price-range\">${priceRange}</div>
@@ -375,6 +376,7 @@ function startHeroRotation() {
       container.style.setProperty('--hero-h', h + 'px');
     }
   };
+  
   // Base images already present in the project
   const sources = [
     { webp: 'assets/laptop.webp', fallback: 'assets/laptop.webp', alt: 'Laptop' },
@@ -382,6 +384,7 @@ function startHeroRotation() {
     { webp: 'assets/printer.webp', fallback: 'assets/printer.webp', alt: 'Imprimante' },
     { webp: 'assets/inc.webp', fallback: 'assets/inc.webp', alt: 'Encres' },
     { webp: 'assets/converter.webp', fallback: 'assets/converter.webp', alt: 'Convertisseur' },
+    { webp: 'assets/omen-laptop.webp', fallback: 'assets/omen-laptop.webp', alt: 'Laptop HP Omen' },
   ];
   // Additional images that will be added eventually. We preload and append only if they exist.
   const additionalCandidates = [
@@ -390,6 +393,16 @@ function startHeroRotation() {
     { webp: 'assets/bag.webp', fallback: 'assets/bag.webp', alt: 'Sac d’ordinateur' },
     { webp: 'assets/charger.webp', fallback: 'assets/charger.webp', alt: 'Chargeur' },
     { webp: 'assets/mouse.webp', fallback: 'assets/mouse.webp', alt: 'Souris' },
+    { webp: 'assets/dellAIO.webp', fallback: 'assets/dellAIO.webp', alt: 'Dell AIO' },
+    { webp: 'assets/hp-m3303fdw.webp', fallback: 'assets/hp-m3303fdw.webp', alt: 'Imprimante HP M3303FDW' },
+    { webp: 'assets/epson-l3252.webp', fallback: 'assets/epson-l3252.webp', alt: 'Imprimante Epson L3252' },
+    { webp: 'assets/hp-charger2.webp', fallback: 'assets/hp-charger2.webp', alt: 'Chargeur HP' },
+    { webp: 'assets/victus-laptop.webp', fallback: 'assets/victus-laptop.webp', alt: 'Laptop HP Victus' },
+    { webp: 'assets/dell-charger2.webp', fallback: 'assets/dell-charger2.webp', alt: 'Chargeur Dell' },
+    { webp: 'assets/lenovo-charger2.webp', fallback: 'assets/lenovo-charger2.webp', alt: 'Chargeur Lenovo' },
+    { webp: 'assets/hp-mouse.webp', fallback: 'assets/hp-mouse.webp', alt: 'Souris HP' },
+    { webp: 'assets/licence.webp', fallback: 'assets/licence.webp', alt: 'Licence' },
+
   ];
 
   additionalCandidates.forEach(candidate => {
@@ -409,11 +422,17 @@ function startHeroRotation() {
       return;
     i = (i + 1) % sources.length;
     const pic = container.querySelector('source');
-    if (pic) {
-      pic.srcset = sources[i].webp;
-    }
-    img.src = sources[i].fallback;
-    img.alt = sources[i].alt;
+    // Fade out, swap, fade in
+    img.style.opacity = '0';
+    setTimeout(() => {
+      if (pic) {
+        pic.srcset = sources[i].webp;
+      }
+      img.src = sources[i].fallback;
+      img.alt = sources[i].alt;
+      // After a short delay, fade back in
+      setTimeout(() => { img.style.opacity = '1'; }, 50);
+    }, 220);
   }, 3500);
 }
 function wireThemeToggle() {

@@ -44,8 +44,8 @@ main{flex:1;width:100%;padding-top:110px}
 .hero-info .info-line{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--ring);border-radius:10px;padding:12px 14px;max-width:720px;width:100%}
 .hero-info .icon{color:var(--accent);flex-shrink:0}
 html.dark .hero-info .info-line{background:#0f172a;border-color:#1f2937}
-.hero-media{--hero-w:auto;--hero-h:auto;width:100%}
-.hero-media img{width:var(--hero-w);height:var(--hero-h);max-width:100%;object-fit:contain;background:transparent;border-radius:12px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.18));transition:transform .35s ease,filter .35s ease}
+.hero-media{--hero-w:auto;--hero-h:auto;width:100%;position:relative}
+.hero-media img{width:var(--hero-w);height:var(--hero-h);max-width:100%;object-fit:contain;background:transparent;border-radius:12px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.18));transition:opacity .6s ease, transform .35s ease,filter .35s ease;opacity:1}
 .hero-media:hover img{transform:translateY(-4px) scale(1.02);filter:drop-shadow(0 14px 30px rgba(0,0,0,.22)) saturate(1.05)}
 /* Social links shown under location in hero */
 .hero-social{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
